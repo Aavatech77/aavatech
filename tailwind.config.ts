@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       backgroundImage: {
-        "landing-gradient":
+        "main-gradient":
           "linear-gradient(180.71deg, rgba(72, 116, 174, 0.7) 0.61%, #4874AE 99.39%)",
       },
       colors: {
