@@ -1,13 +1,13 @@
 import React from "react";
-import { Gradiennt } from "../Gradient";
+import { Gradient } from "../Gradient";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import Hero from "@/public/assets/landing-page/landing-hero.png";
 
 const HeroSection = () => {
   return (
-    <Gradiennt>
-      <div className="flex-1">
+    <Gradient>
+      <div className="">
         <h1 className="font-bold text-3xl mb-4">
           Transform Your Business with Innovative IT Solutions.
         </h1>
@@ -24,7 +24,7 @@ const HeroSection = () => {
           </Button>
         </div>
       </div>
-      <div className="flex-1 relative">
+      <div className="relative">
         <Image
           src={Hero}
           fill
@@ -33,7 +33,7 @@ const HeroSection = () => {
           className="object-contain"
         />
       </div>
-    </Gradiennt>
+    </Gradient>
   );
 };
 
