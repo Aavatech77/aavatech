@@ -1,4 +1,3 @@
-"use client";
 import LandingPageAbout from "@/components/landing-page/AboutSection";
 import ApproachSection from "@/components/landing-page/ApproachSection";
 import BlogsSection from "@/components/landing-page/BlogsSection";
