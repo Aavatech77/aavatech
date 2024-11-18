@@ -3,13 +3,12 @@ import { HeroGradient } from "../HeroGradient";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import Hero from "@/public/assets/landing-page/landing-hero.png";
-import { motion } from "motion/react";
 import AnimateInView from "../animate/AnimateInView";
 
 const HeroSection = () => {
   return (
     <HeroGradient>
-      <AnimateInView type="fade-in" direction="bottom">
+      <AnimateInView type="fade-in" direction="bottom" className="pr-4">
         <h1 className="font-bold text-5xl mb-4">
           Transform Your Business with Innovative IT Solutions.
         </h1>

@@ -2,7 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import PersonImage from "@/public/assets/landing-page/person.png";
-import { motion } from "motion/react";
 import AnimateInView from "../animate/AnimateInView";
 
 const LandingPageAbout = () => {
