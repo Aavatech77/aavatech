@@ -7,7 +7,7 @@ function Hero() {
   return (
     <HeroGradient>
       <div className="">
-        <h1 className="font-bold text-3xl mb-4">
+        <h1 className="font-bold text-2xl md:text-5xl mb-4">
           Transform Your Business with Innovative IT Solutions.
         </h1>
         <p className="mb-8">

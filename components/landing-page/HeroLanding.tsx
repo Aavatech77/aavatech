@@ -1,6 +1,6 @@
 import React from "react";
 
-const HeroLanding = () => {
+const HeroLanding = ({ className }: { className: string }) => {
   return (
     <>
       <svg
@@ -10,6 +10,7 @@ const HeroLanding = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        className={className}
       >
         <rect width="621" height="499" fill="url(#pattern0_622_2203)" />
         <defs>

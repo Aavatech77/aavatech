@@ -9,7 +9,6 @@ import PythonLogo from "@/public/assets/brand-logos/python-logo.png";
 import DjangoLogo from "@/public/assets/brand-logos/django-logo.png";
 import FigmaLogo from "@/public/assets/brand-logos/figma-logo.png";
 import WordPressLogo from "@/public/assets/brand-logos/wordpress-logo.png";
-import Mastery from "@/public/assets/landing-page/mastery.png";
 import AnimateInView from "../animate/AnimateInView";
 import MasteryImg from "./MasteryImg";
 
@@ -59,7 +58,7 @@ const mastery: IMastery[] = [
 
 const MasterySection = () => {
   return (
-    <section className="container grid md:grid-cols-2 mb-6">
+    <section className="container grid md:grid-cols-2 my-6 w-screen overflow-hidden">
       <AnimateInView type="fade-in">
         <h1 className="text-2xl font-semibold mb-2">
           Our <span className="text-highlight">Mastery</span>
@@ -88,7 +87,6 @@ const MasterySection = () => {
         </div>
       </AnimateInView>
       <AnimateInView type="slide-in" className="mx-auto">
-        {/* <Image src={Mastery} alt="Our Mastery" /> */}
         <MasteryImg />
       </AnimateInView>
     </section>

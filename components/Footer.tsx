@@ -21,7 +21,7 @@ const Footer = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Necessitatibus, doloribus?
           </p>
-          <p>info@aavatechnepal.com</p>
+          <p className="break-all">info@aavatechnepal.com</p>
         </div>
         <div className="space-y-3">
           <p className="font-medium">About Us</p>

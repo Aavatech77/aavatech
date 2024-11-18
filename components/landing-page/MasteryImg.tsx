@@ -10,6 +10,7 @@ const MasteryImg = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
+        className="size-full"
       >
         <rect width="519" height="423" fill="url(#pattern0_622_107)" />
         <defs>
