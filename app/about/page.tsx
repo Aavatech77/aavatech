@@ -1,5 +1,3 @@
-import { HeroGradient } from '@/components/HeroGradient'
-import Image from 'next/image'
 import React from 'react'
 import Hero from './components/Hero'
 import Objective from './components/Objective'
@@ -17,7 +15,6 @@ function page() {
             <Team />
             <Partners />
             <Workwithus />
-            {/* TODO:  <CTA> */}
         </div>
 
     )
