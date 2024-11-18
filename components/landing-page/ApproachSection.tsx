@@ -1,6 +1,6 @@
-import { div } from "motion/react-client";
 import Image from "next/image";
 import React from "react";
+import AnimateInView from "../animate/AnimateInView";
 
 const images: string[] = [
   "/assets/landing-page/users.png",
@@ -55,7 +55,10 @@ const ApproachSection = () => {
         <div className="flex flex-wrap justify-center gap-6 mt-6">
           {content.map((item, i) => (
             <div className="" key={i}>
-              <div className="size-20 relative mx-auto">
+              <AnimateInView
+                type="scale-and-fade"
+                className="size-20 relative mx-auto origin-top-left"
+              >
                 <Image
                   src={item.image}
                   width={80}
@@ -63,10 +66,12 @@ const ApproachSection = () => {
                   alt=""
                   className=" object-contain"
                 />
-              </div>
-              <p className="font-semibold text-sm mx-auto max-w-[24ch] text-center">
-                {item.title}
-              </p>
+              </AnimateInView>
+              <AnimateInView type="fade-in">
+                <p className="font-semibold text-sm mx-auto max-w-[24ch] text-center">
+                  {item.title}
+                </p>
+              </AnimateInView>
             </div>
           ))}
         </div>

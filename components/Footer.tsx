@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className="text-center">
+      <p className="text-center text-xs">
         Copyright &copy;Aava Technology, All Rights Reserved
       </p>
     </footer>

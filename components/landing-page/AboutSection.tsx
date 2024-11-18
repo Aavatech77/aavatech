@@ -2,11 +2,13 @@ import React from "react";
 import Image from "next/image";
 import { Button } from "../ui/button";
 import PersonImage from "@/public/assets/landing-page/person.png";
+import { motion } from "motion/react";
+import AnimateInView from "../animate/AnimateInView";
 
 const LandingPageAbout = () => {
   return (
     <section className="container grid md:grid-cols-2 place-items-center gap-4 my-8 md:my-12">
-      <div>
+      <AnimateInView type="fade-in">
         <h1 className="font-semibold text-2xl mb-4">
           Who <span className="text-highlight">we are</span>
         </h1>
@@ -18,8 +20,11 @@ const LandingPageAbout = () => {
           pariatur quia delectus debitis.
         </p>
         <Button className="rounded-full">About Us</Button>
-      </div>
-      <div className="relative min-h-[300px] size-full">
+      </AnimateInView>
+      <AnimateInView
+        type="slide-in"
+        className="relative min-h-[300px] w-full mx-auto"
+      >
         <Image
           src={PersonImage}
           fill
@@ -27,7 +32,7 @@ const LandingPageAbout = () => {
           alt="A person using Laptop"
           className="object-contain"
         />
-      </div>
+      </AnimateInView>
     </section>
   );
 };

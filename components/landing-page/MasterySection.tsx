@@ -11,6 +11,7 @@ import DjangoLogo from "@/public/assets/brand-logos/django-logo.png";
 import FigmaLogo from "@/public/assets/brand-logos/figma-logo.png";
 import WordPressLogo from "@/public/assets/brand-logos/wordpress-logo.png";
 import Mastery from "@/public/assets/landing-page/mastery.png";
+import AnimateInView from "../animate/AnimateInView";
 
 interface IMastery {
   image: string | StaticImageData;
@@ -59,7 +60,7 @@ const mastery: IMastery[] = [
 const MasterySection = () => {
   return (
     <section className="container grid md:grid-cols-2 mb-6">
-      <div className="">
+      <AnimateInView type="fade-in">
         <h1 className="text-2xl font-semibold mb-2">
           Our <span className="text-highlight">Mastery</span>
         </h1>
@@ -67,7 +68,7 @@ const MasterySection = () => {
           The technologies we depend on to{" "}
           <span className="text-[#4874AE]">attain success</span>
         </h2>
-        <div className="flex gap-2 font-semibold">
+        <div className="flex flex-wrap gap-2 font-semibold">
           <p className="border-r text-nowrap px-4">Web Development</p>
           <p className="border-r text-nowrap px-4">App Development</p>
           <p className="px-4">Database</p>
@@ -75,19 +76,20 @@ const MasterySection = () => {
 
         <div className="flex gap-6 flex-wrap mt-8">
           {mastery.map((item, i) => (
-            <Image
-              src={item.image}
-              width={52}
-              alt={item.alt}
-              className="object-contain"
-              key={i}
-            />
+            <AnimateInView type="scale" delay={0.2 + 0.1 * i} key={i}>
+              <Image
+                src={item.image}
+                width={52}
+                alt={item.alt}
+                className="object-contain"
+              />
+            </AnimateInView>
           ))}
         </div>
-      </div>
-      <div className="relative mx-auto">
+      </AnimateInView>
+      <AnimateInView type="slide-in" className="mx-auto">
         <Image src={Mastery} alt="Our Mastery" />
-      </div>
+      </AnimateInView>
     </section>
   );
 };

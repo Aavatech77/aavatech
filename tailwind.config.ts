@@ -16,6 +16,7 @@ export default {
       backgroundImage: {
         "main-gradient":
           "linear-gradient(180.71deg, rgba(72, 116, 174, 0.7) 0.61%, #4874AE 99.39%)",
+        "secondary-gradient": "linear-gradient(0deg, #698dbc, #b6b1b1)",
       },
       colors: {
         highlight: "#4874AE",

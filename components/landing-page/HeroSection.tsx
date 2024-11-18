@@ -3,11 +3,13 @@ import { HeroGradient } from "../HeroGradient";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import Hero from "@/public/assets/landing-page/landing-hero.png";
+import { motion } from "motion/react";
+import AnimateInView from "../animate/AnimateInView";
 
 const HeroSection = () => {
   return (
     <HeroGradient>
-      <div className="md:w-[80%]">
+      <AnimateInView type="fade-in" direction="bottom">
         <h1 className="font-bold text-5xl mb-4">
           Transform Your Business with Innovative IT Solutions.
         </h1>
@@ -29,8 +31,11 @@ const HeroSection = () => {
             Request a Quote
           </Button>
         </div>
-      </div>
-      <div className="relative min-h-[400px] size-full">
+      </AnimateInView>
+      <AnimateInView
+        type="slide-in"
+        className="relative min-h-[400px] size-full"
+      >
         <Image
           src={Hero}
           fill
@@ -38,7 +43,7 @@ const HeroSection = () => {
           alt="hero image"
           className="object-contain"
         />
-      </div>
+      </AnimateInView>
     </HeroGradient>
   );
 };

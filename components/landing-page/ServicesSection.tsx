@@ -75,7 +75,10 @@ const ServicesSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 my-6">
           {services.map((service, index) => (
-            <div key={index}>
+            <div
+              key={index}
+              className="rounded-tr-lg rounded-bl-lg p-4 relative group overflow-hidden"
+            >
               <div className="relative min-h-[250px]">
                 <Image
                   src={service.image}
@@ -86,10 +89,11 @@ const ServicesSection = () => {
                 />
               </div>
               <p className="font-semibold text-lg my-2">{service.title}</p>
-              <p className="">{service.description}</p>
+              <p className="mb-2">{service.description}</p>
               <Link href={service.href} className="text-primary flex gap-2">
                 More Details <ArrowRight />
               </Link>
+              <div className="absolute inset-0 bg-secondary-gradient opacity-0 group-hover:opacity-100 -z-10 transition-opacity duration-700"></div>
             </div>
           ))}
         </div>
