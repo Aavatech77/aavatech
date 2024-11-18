@@ -5,6 +5,7 @@ import Inmark from '@/public/assets/about-page/Inmarc-client-logos-Recovered-32.
 import clientlogo from '@/public/assets/about-page/clientlogo-8-3.png'
 import KudosClient from '@/public/assets/about-page/Kudos-Client-Logo-3.png'
 import Image from 'next/image';
+import AnimateInView from '@/components/animate/AnimateInView';
 
 
 const partners = [
@@ -27,16 +28,20 @@ const partners = [
 function Partners() {
     return (
         <div className='bg-[#4874AE]/10'>
-            <h1 className='text-3xl text-center pt-20'>
-                Our Partnership and Collabratiors
-            </h1>
-            <div className='grid grid-cols-5 gap-4'>
-                {partners.map((partner, index) => (
-                    <div key={index} className=' p-4 rounded-md flex flex-col justify-center items-center'>
-                        <Image src={partner.logo} alt='partner logo' />
-                    </div>
-                ))}
-            </div>
+            <AnimateInView type='fade-in'>
+                <h1 className='text-3xl text-center pt-20'>
+                    Our Partnership and Collabratiors
+                </h1>
+            </AnimateInView>
+            <AnimateInView type='scale' className='relative'>
+                <div className='grid grid-cols-5 gap-4'>
+                    {partners.map((partner, index) => (
+                        <div key={index} className=' p-4 rounded-md flex flex-col justify-center items-center'>
+                            <Image src={partner.logo} alt='partner logo' />
+                        </div>
+                    ))}
+                </div>
+            </AnimateInView>
 
         </div>
     )
