@@ -7,24 +7,30 @@ import Hero from "@/public/assets/landing-page/landing-hero.png";
 const HeroSection = () => {
   return (
     <HeroGradient>
-      <div className="">
-        <h1 className="font-bold text-3xl mb-4">
+      <div className="md:w-[80%]">
+        <h1 className="font-bold text-5xl mb-4">
           Transform Your Business with Innovative IT Solutions.
         </h1>
-        <p className="mb-8">
+        <p className="mb-8 pr-4">
           We deliver cutting-edge software development, cloud solutions, and IT
           consulting to drive your business forward. We deliver cutting-edge
           software development, cloud solutions, and IT consulting to drive your
           business forward
         </p>
         <div className="flex gap-4">
-          <Button className="rounded-full">Book A Consultation</Button>
-          <Button variant="outline" className="text-primary rounded-full">
+          <Button className="rounded-full" size="lg">
+            Book A Consultation
+          </Button>
+          <Button
+            variant="outline"
+            className="text-primary rounded-full"
+            size="lg"
+          >
             Request a Quote
           </Button>
         </div>
       </div>
-      <div className="relative size-full">
+      <div className="relative min-h-[400px] size-full">
         <Image
           src={Hero}
           fill

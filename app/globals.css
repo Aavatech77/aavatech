@@ -81,3 +81,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .social-icon {
+    @apply size-8 rounded-full bg-gray-200 flex justify-center items-center p-2;
+  }
+}

@@ -5,12 +5,12 @@ import PersonImage from "@/public/assets/landing-page/person.png";
 
 const LandingPageAbout = () => {
   return (
-    <section className="container grid md:grid-cols-2 place-items-center my-8 md:my-12">
+    <section className="container grid md:grid-cols-2 place-items-center gap-4 my-8 md:my-12">
       <div>
-        <p className="font-semibold text-2xl">
-          Who <span className="text-[#4874AE]">we are</span>
-        </p>
-        <p>
+        <h1 className="font-semibold text-2xl mb-4">
+          Who <span className="text-highlight">we are</span>
+        </h1>
+        <p className="mb-6">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, iusto
           repellendus recusandae accusamus soluta libero porro perspiciatis
           laborum fugiat. Quas alias architecto animi placeat mollitia suscipit
@@ -19,7 +19,7 @@ const LandingPageAbout = () => {
         </p>
         <Button className="rounded-full">About Us</Button>
       </div>
-      <div className="relative size-full">
+      <div className="relative min-h-[300px] size-full">
         <Image
           src={PersonImage}
           fill
