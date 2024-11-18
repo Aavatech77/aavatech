@@ -148,15 +148,18 @@ const AnimateInView = ({
 }: Props) => {
   const { initial, whileInView } = getAnimation(type, direction);
   return (
-    <motion.div
-      initial={initial}
-      whileInView={whileInView}
-      transition={{ duration, delay }}
-      viewport={{ once: true }}
-      className={className}
-    >
-      {children}
-    </motion.div>
+    <div className={`relative ${className}`}>
+      <motion.div
+        initial={initial}
+        whileInView={whileInView}
+        transition={{ duration, delay }}
+        viewport={{ once: true }}
+        className="absolute inset-0"
+      >
+        <div className="w-full h-full">{children}</div>
+      </motion.div>
+      <div className="invisible">{children}</div>
+    </div>
   );
 };
 

@@ -90,7 +90,10 @@ const Testimonials = () => {
                   mollitia officiis, velit nisi neque aperiam animi voluptas
                   amet hic eaque. Quis!
                 </p>
-                <Link href="/testimonials" className="flex gap-2 text-primary">
+                <Link
+                  href="/testimonials"
+                  className="flex gap-2 text-primary text-sm"
+                >
                   Read More <ArrowRight />
                 </Link>
               </div>

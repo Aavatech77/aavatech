@@ -4,6 +4,7 @@ import baverly from '@/public/assets/about-page/baverly.png'
 import bill from '@/public/assets/about-page/bill.png'
 import john from '@/public/assets/about-page/john.png'
 import Image from 'next/image'
+import AnimateInView from '@/components/animate/AnimateInView'
 
 
 
@@ -47,10 +48,12 @@ const TeamsCard = () => {
 function Team() {
     return (
         <div className='container mt-8 mb-8'>
-            <h1 className='text-3xl mb-8 font-bold'>
-                Our Team
-            </h1>
-            <TeamsCard />
+            <AnimateInView type='scale'>
+                <h1 className='text-3xl mb-8 font-bold'>
+                    Our Team
+                </h1>
+                <TeamsCard />
+            </AnimateInView>
         </div>
     )
 }

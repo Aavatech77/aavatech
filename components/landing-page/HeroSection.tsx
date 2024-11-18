@@ -1,15 +1,14 @@
 import React from "react";
 import { HeroGradient } from "../HeroGradient";
 import { Button } from "../ui/button";
-import Image from "next/image";
-import Hero from "@/public/assets/landing-page/landing-hero.png";
 import AnimateInView from "../animate/AnimateInView";
+import HeroLanding from "./HeroLanding";
 
 const HeroSection = () => {
   return (
     <HeroGradient>
-      <AnimateInView type="fade-in" direction="bottom" className="pr-4">
-        <h1 className="font-bold text-5xl mb-4">
+      <AnimateInView type="fade-in" direction="bottom" className="pr-4 flex-1">
+        <h1 className="font-bold text-2xl md:text-5xl mb-4">
           Transform Your Business with Innovative IT Solutions.
         </h1>
         <p className="mb-8 pr-4">
@@ -18,7 +17,7 @@ const HeroSection = () => {
           software development, cloud solutions, and IT consulting to drive your
           business forward
         </p>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-wrap">
           <Button className="rounded-full" size="lg">
             Book A Consultation
           </Button>
@@ -31,17 +30,8 @@ const HeroSection = () => {
           </Button>
         </div>
       </AnimateInView>
-      <AnimateInView
-        type="slide-in"
-        className="relative min-h-[400px] size-full"
-      >
-        <Image
-          src={Hero}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          alt="hero image"
-          className="object-contain"
-        />
+      <AnimateInView type="slide-in" className="relative size-full flex-1">
+        <HeroLanding className="size-full" />
       </AnimateInView>
     </HeroGradient>
   );
