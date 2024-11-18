@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import HTMLLogo from "@/public/assets/brand-logos/html-logo.png";
@@ -12,6 +11,7 @@ import FigmaLogo from "@/public/assets/brand-logos/figma-logo.png";
 import WordPressLogo from "@/public/assets/brand-logos/wordpress-logo.png";
 import Mastery from "@/public/assets/landing-page/mastery.png";
 import AnimateInView from "../animate/AnimateInView";
+import MasteryImg from "./MasteryImg";
 
 interface IMastery {
   image: string | StaticImageData;
@@ -88,7 +88,8 @@ const MasterySection = () => {
         </div>
       </AnimateInView>
       <AnimateInView type="slide-in" className="mx-auto">
-        <Image src={Mastery} alt="Our Mastery" />
+        {/* <Image src={Mastery} alt="Our Mastery" /> */}
+        <MasteryImg />
       </AnimateInView>
     </section>
   );

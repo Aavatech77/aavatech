@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 import Hero from "@/public/assets/landing-page/landing-hero.png";
 import AnimateInView from "../animate/AnimateInView";
+import HeroLanding from "./HeroLanding";
 
 const HeroSection = () => {
   return (
@@ -35,13 +36,7 @@ const HeroSection = () => {
         type="slide-in"
         className="relative min-h-[400px] size-full"
       >
-        <Image
-          src={Hero}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          alt="hero image"
-          className="object-contain"
-        />
+        <HeroLanding />
       </AnimateInView>
     </HeroGradient>
   );
