@@ -31,6 +31,7 @@ function Hero() {
             sizes="(max-width: 768px) 100vw, 50vw"
             alt="hero image"
             className="object-contain"
+            priority
           />
         </div>
       </AnimateInView>

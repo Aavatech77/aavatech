@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 
 type Props = {
   options: { label: string; tab: string }[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setActiveTab: (value: any) => void;
 };
 

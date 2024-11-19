@@ -141,7 +141,7 @@ const getAnimation = (animationType: string, direction: TDirection) => {
 const AnimateInView = ({
   type,
   children,
-  className,
+  className = "",
   direction = "right",
   duration = 0.3,
   delay = 0,

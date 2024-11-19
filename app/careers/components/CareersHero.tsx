@@ -18,7 +18,13 @@ const CareersHero = () => {
         </p>
       </AnimateInView>
       <AnimateInView type="slide-in" className="relative flex-1 w-full">
-        <Image src="/assets/svgs/careers.svg" alt="" width={800} height={800} />
+        <Image
+          src="/assets/svgs/careers.svg"
+          alt=""
+          width={800}
+          height={800}
+          priority
+        />
       </AnimateInView>
     </HeroGradient>
   );

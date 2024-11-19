@@ -23,6 +23,7 @@ const IndustriesHero = () => {
           alt=""
           width={800}
           height={800}
+          priority
         />
       </AnimateInView>
     </HeroGradient>
