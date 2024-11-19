@@ -1,10 +1,9 @@
-import React from "react";
-import { HeroGradient } from "../HeroGradient";
-import { Button } from "../ui/button";
-import AnimateInView from "../animate/AnimateInView";
+import AnimateInView from "@/components/animate/AnimateInView";
+import { HeroGradient } from "@/components/HeroGradient";
 import Image from "next/image";
+import React from "react";
 
-const HeroSection = () => {
+const ConsultHero = () => {
   return (
     <HeroGradient>
       <AnimateInView type="fade-in" direction="bottom" className="pr-4 flex-1">
@@ -17,30 +16,17 @@ const HeroSection = () => {
           software development, cloud solutions, and IT consulting to drive your
           business forward
         </p>
-        <div className="flex gap-4 flex-wrap">
-          <Button className="rounded-full" size="lg">
-            Book A Consultation
-          </Button>
-          <Button
-            variant="outline"
-            className="text-primary rounded-full"
-            size="lg"
-          >
-            Request a Quote
-          </Button>
-        </div>
       </AnimateInView>
       <AnimateInView type="slide-in" className="relative size-full flex-1">
         <Image
-          src="/assets/svgs/landing.svg"
+          src="/assets/svgs/Marketing.svg"
           alt=""
           width={800}
           height={800}
-          priority
         />
       </AnimateInView>
     </HeroGradient>
   );
 };
 
-export default HeroSection;
+export default ConsultHero;

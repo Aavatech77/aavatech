@@ -16,7 +16,7 @@ const BlogsSection = () => {
         </h1>
         <p className="text-center text-sm">
           At our IT company, we empower businesses with innovative, scalable
-          solutions that drive success and efficiency."
+          solutions that drive success and efficiency.
         </p>
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 lg:gap-12 my-8">
           <div className="space-y-8">

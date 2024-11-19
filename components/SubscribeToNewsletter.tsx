@@ -9,7 +9,7 @@ const SubscribeToNewsLetter = () => {
       <div className="container grid md:grid-cols-2 gap-4 md:gap-8 py-8 md:py-12">
         <div className="space-y-4">
           <h1 className="font-semibold text-2xl">
-            Let's collaborate to bring your vision to
+            Let&apos;s collaborate to bring your vision to
             <span className="text-highlight">life and make it a reality.</span>
           </h1>
           <p className="text-sm">

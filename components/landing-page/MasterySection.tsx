@@ -10,7 +10,6 @@ import DjangoLogo from "@/public/assets/brand-logos/django-logo.png";
 import FigmaLogo from "@/public/assets/brand-logos/figma-logo.png";
 import WordPressLogo from "@/public/assets/brand-logos/wordpress-logo.png";
 import AnimateInView from "../animate/AnimateInView";
-import MasteryImg from "./MasteryImg";
 
 interface IMastery {
   image: string | StaticImageData;
@@ -58,7 +57,7 @@ const mastery: IMastery[] = [
 
 const MasterySection = () => {
   return (
-    <section className="container grid md:grid-cols-2 my-6 w-screen overflow-hidden">
+    <section className="container grid md:grid-cols-2 my-6">
       <AnimateInView type="fade-in">
         <h1 className="text-2xl font-semibold mb-2">
           Our <span className="text-highlight">Mastery</span>
@@ -87,7 +86,7 @@ const MasterySection = () => {
         </div>
       </AnimateInView>
       <AnimateInView type="slide-in" className="mx-auto">
-        <MasteryImg />
+        <Image src="/assets/svgs/mastery.svg" alt="" width={800} height={800} />
       </AnimateInView>
     </section>
   );

@@ -77,7 +77,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="rounded-tr-lg rounded-bl-lg p-4 relative group overflow-hidden"
+              className="rounded-tr-xl rounded-bl-xl p-4 relative group overflow-hidden"
             >
               <div className="relative min-h-[250px]">
                 <Image
