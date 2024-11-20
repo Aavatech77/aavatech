@@ -39,9 +39,11 @@ const Testimonials = () => {
   return (
     <section className="my-6 md:my-12">
       <div className="container">
-        <h1 className="font-semibold text-2xl">Testimonials</h1>
+        <h1 className="font-semibold text-2xl">
+          Testi<span className="text-highlight">monial</span>
+        </h1>
         <h2 className="font-semibold text-xl mb-4">
-          What our customers have <span className="text-highlight">to say</span>
+          What People Say <span className="text-highlight">About Us</span>
         </h2>
       </div>
       <div className="md:max-w-[calc(100vw_-_4rem)] mx-auto grid gap-4 md:grid-cols-2 grid-flow-row lg:grid-cols-[minmax(200px,1fr)_minmax(400px,_1.5fr)_minmax(200px,1fr)]">

@@ -1,12 +1,12 @@
 import React from "react";
 import AnimateInView from "@/components/animate/AnimateInView";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 export type LayoutWithImageProps = {
   title: string;
   subtitle: string;
   content: string;
-  img: string;
+  img: string | StaticImageData;
   titleHighlight?: string;
   subtitleHighlight?: string;
 };
