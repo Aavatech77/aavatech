@@ -7,7 +7,7 @@ import AnimateInView from "@/components/animate/AnimateInView";
 function Hero() {
   return (
     <HeroGradient>
-      <AnimateInView type="fade-in">
+      <AnimateInView type="fade-in" direction="bottom" className="flex-1">
         <div className="">
           <h1 className="font-bold text-3xl mb-4">
             Transform Your Business with Innovative IT Solutions.
@@ -22,7 +22,7 @@ function Hero() {
       </AnimateInView>
       <AnimateInView
         type="slide-in"
-        className="relative min-h-[300px] w-full mx-auto"
+        className="relative min-h-[300px] w-full mx-auto flex-1"
       >
         <div className="relative size-full min-h-[400px]">
           <Image
@@ -31,6 +31,7 @@ function Hero() {
             sizes="(max-width: 768px) 100vw, 50vw"
             alt="hero image"
             className="object-contain"
+            priority
           />
         </div>
       </AnimateInView>

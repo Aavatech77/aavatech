@@ -2,14 +2,6 @@ import Image from "next/image";
 import React from "react";
 import AnimateInView from "../animate/AnimateInView";
 
-const images: string[] = [
-  "/assets/landing-page/users.png",
-  "/assets/landing-page/badge.png",
-  "/assets/landing-page/git.png",
-  "/assets/landing-page/code.png",
-  "/assets/landing-page/download.png",
-];
-
 interface IApproach {
   title: string;
   image: string;

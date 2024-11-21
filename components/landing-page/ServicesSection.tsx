@@ -19,42 +19,42 @@ const services: IServices[] = [
     description:
       "A visually stunning and fully functional website design tailored to your needs.",
     image: WebsiteDev,
-    href: "#",
+    href: "/services/development",
   },
   {
     title: "App Development",
     description:
       "A visually stunning and fully functional app design tailored to your needs.",
     image: AppDev,
-    href: "#",
+    href: "/services/development",
   },
   {
     title: "Software Development",
     description:
       "A visually stunning and fully functional software design tailored to your needs.",
     image: SoftwareDev,
-    href: "#",
+    href: "/services/development",
   },
   {
     title: "Website Development",
     description:
       "A visually stunning and fully functional website design tailored to your needs.",
     image: WebsiteDev,
-    href: "#",
+    href: "/services/development",
   },
   {
     title: "Website Development",
     description:
       "A visually stunning and fully functional website design tailored to your needs.",
     image: WebsiteDev,
-    href: "#",
+    href: "/services/development",
   },
   {
     title: "Website Development",
     description:
       "A visually stunning and fully functional website design tailored to your needs.",
     image: WebsiteDev,
-    href: "#",
+    href: "/services/development",
   },
 ];
 
@@ -77,7 +77,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="rounded-tr-lg rounded-bl-lg p-4 relative group overflow-hidden"
+              className="rounded-tr-xl rounded-bl-xl p-4 relative group overflow-hidden"
             >
               <div className="relative min-h-[250px]">
                 <Image

@@ -2,7 +2,8 @@ import React from "react";
 import { HeroGradient } from "../HeroGradient";
 import { Button } from "../ui/button";
 import AnimateInView from "../animate/AnimateInView";
-import HeroLanding from "./HeroLanding";
+import Image from "next/image";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -18,9 +19,11 @@ const HeroSection = () => {
           business forward
         </p>
         <div className="flex gap-4 flex-wrap">
-          <Button className="rounded-full" size="lg">
-            Book A Consultation
-          </Button>
+          <Link href="/services/consultant">
+            <Button className="rounded-full" size="lg">
+              Book A Consultation
+            </Button>
+          </Link>
           <Button
             variant="outline"
             className="text-primary rounded-full"
@@ -31,7 +34,13 @@ const HeroSection = () => {
         </div>
       </AnimateInView>
       <AnimateInView type="slide-in" className="relative size-full flex-1">
-        <HeroLanding className="size-full" />
+        <Image
+          src="/assets/svgs/landing.svg"
+          alt=""
+          width={800}
+          height={800}
+          priority
+        />
       </AnimateInView>
     </HeroGradient>
   );
