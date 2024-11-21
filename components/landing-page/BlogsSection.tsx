@@ -72,11 +72,11 @@ const BlogsSection = () => {
             </AnimateInView>
           </div>
         </div>
-        <Link href="/blogs" className="flex justify-center">
-          <Button className="rounded-full" size="lg">
+        <Button className="rounded-full" size="lg" asChild>
+          <Link href="/blogs" className="flex justify-center">
             Explore More
-          </Button>
-        </Link>
+          </Link>
+        </Button>
       </div>
     </section>
   );

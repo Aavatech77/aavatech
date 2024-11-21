@@ -22,9 +22,11 @@ const Vacancy = ({ title, role, date, description, href }: TVacancy) => {
       <p className="font-normal line-clamp-3 text-ellipsis text-sm">
         {description}
       </p>
-      <Link href={href} className="block mt-8">
-        <Button>View Details</Button>
-      </Link>
+      <Button asChild>
+        <Link href={href} className="block mt-8">
+          View Details
+        </Link>
+      </Button>
     </div>
   );
 };

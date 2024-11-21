@@ -19,17 +19,16 @@ const HeroSection = () => {
           business forward
         </p>
         <div className="flex gap-4 flex-wrap">
-          <Link href="/services/consultant">
-            <Button className="rounded-full" size="lg">
-              Book A Consultation
-            </Button>
-          </Link>
+          <Button className="rounded-full" size="lg" asChild>
+            <Link href="/services/consultant">Book A Consultation</Link>
+          </Button>
           <Button
             variant="outline"
             className="text-primary rounded-full"
             size="lg"
+            asChild
           >
-            Request a Quote
+            <Link href="/">Request a Quote</Link>
           </Button>
         </div>
       </AnimateInView>

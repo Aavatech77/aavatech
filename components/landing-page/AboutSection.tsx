@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import PersonImage from "@/public/assets/landing-page/person.png";
 import AnimateInView from "../animate/AnimateInView";
+import Link from "next/link";
 
 const LandingPageAbout = () => {
   return (
@@ -18,7 +19,9 @@ const LandingPageAbout = () => {
           voluptatum dolor. Est, error autem in nemo eaque accusamus sit
           pariatur quia delectus debitis.
         </p>
-        <Button className="rounded-full">About Us</Button>
+        <Button className="rounded-full" asChild>
+          <Link href="/about">About Us</Link>
+        </Button>
       </AnimateInView>
       <AnimateInView
         type="slide-in"

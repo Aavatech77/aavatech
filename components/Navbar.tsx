@@ -264,9 +264,11 @@ export default function NavBar() {
               </NavigationMenuList>
             </NavigationMenu>
           </div>
-          <Link href="/contact" className="hidden md:block">
-            <Button>Contact Us</Button>
-          </Link>
+          <Button asChild>
+            <Link href="/contact" className="hidden md:block">
+              Contact Us
+            </Link>
+          </Button>
           <MobileNav
             isOpen={isOpen}
             onClose={closeMenu}
