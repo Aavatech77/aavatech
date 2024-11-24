@@ -23,6 +23,7 @@ function Hero() {
       <AnimateInView
         type="slide-in"
         className="relative min-h-[300px] w-full mx-auto flex-1"
+        addBounce
       >
         <div className="relative size-full min-h-[400px]">
           <Image

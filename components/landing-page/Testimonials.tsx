@@ -37,7 +37,7 @@ const testimonials: ITestimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="my-6 md:my-12">
+    <section className="my-6 md:my-12 py-6 md:py-12 bg-[#4874AE1A]/10">
       <div className="container">
         <h1 className="font-semibold text-2xl">
           Testi<span className="text-highlight">monial</span>

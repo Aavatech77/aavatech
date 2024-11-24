@@ -33,6 +33,7 @@ const MENU_ITEMS = [
   { href: "/industries", label: "Industries" },
   { href: "/careers", label: "Careers" },
   { href: "/blogs", label: "Blogs" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 const SERVICES = [
@@ -194,9 +195,9 @@ export default function NavBar() {
   }, []);
 
   return (
-    <header className="bg-transparent shadow-sm text-white">
-      <nav className="container">
-        <div className="flex min-h-16 items-center justify-between">
+    <header className="text-white absolute h-16 w-full top-0 left-0 shadow-sm py-4 flex items-center">
+      <nav className="container relative z-20">
+        <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="w-24">
               <Image
@@ -211,17 +212,21 @@ export default function NavBar() {
           <div className="hidden md:block">
             <NavigationMenu>
               <NavigationMenuList>
-                {MENU_ITEMS.map((item) => (
-                  <NavigationMenuItem key={item.href}>
-                    <Link href={item.href} legacyBehavior passHref>
-                      <NavigationMenuLink
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        {item.label}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
-                ))}
+                {MENU_ITEMS.map((item) => {
+                  return (
+                    item.href !== "/contact" && (
+                      <NavigationMenuItem key={item.href}>
+                        <Link href={item.href} legacyBehavior passHref>
+                          <NavigationMenuLink
+                            className={navigationMenuTriggerStyle()}
+                          >
+                            {item.label}
+                          </NavigationMenuLink>
+                        </Link>
+                      </NavigationMenuItem>
+                    )
+                  );
+                })}
                 <NavigationMenuItem>
                   <NavigationMenuTrigger>Services</NavigationMenuTrigger>
                   <NavigationMenuContent>
@@ -276,6 +281,7 @@ export default function NavBar() {
           />
         </div>
       </nav>
+      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 tr w-1/2 h-36 rounded-b-full bg-slate-200 blur-xl z-10"></div> */}
     </header>
   );
 }

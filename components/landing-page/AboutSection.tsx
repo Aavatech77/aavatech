@@ -29,8 +29,6 @@ const LandingPageAbout = () => {
       >
         <Image
           src={PersonImage}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
           alt="A person using Laptop"
           className="object-contain"
         />

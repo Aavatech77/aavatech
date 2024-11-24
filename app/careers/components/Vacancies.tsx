@@ -11,6 +11,8 @@ type TVacancy = {
   href: string;
 };
 
+const vacancies: TVacancy[] = [];
+
 const Vacancy = ({ title, role, date, description, href }: TVacancy) => {
   return (
     <div className="p-4 border border-[#b7b1b1] rounded-xl space-y-4 font-semibold">
@@ -32,39 +34,20 @@ const Vacancy = ({ title, role, date, description, href }: TVacancy) => {
 };
 
 const Vacancies = () => {
-  const vacancies: TVacancy[] = [
-    {
-      title: "Designer",
-      role: "UI/UX Designer",
-      date: "2024/11/18",
-      description:
-        "We are hiring a Junior Content Writer. As a junior content writer, you will create content for various platforms, including Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quas?",
-      href: "/",
-    },
-    {
-      title: "Designer",
-      role: "UI/UX Designer",
-      date: "2024/11/18",
-      description:
-        "We are hiring a Junior Content Writer. As a junior content writer, you will create content for various platforms, including Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quas?",
-      href: "/",
-    },
-    {
-      title: "Designer",
-      role: "UI/UX Designer",
-      date: "2024/11/18",
-      description:
-        "We are hiring a Junior Content Writer. As a junior content writer, you will create content for various platforms, including Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quas?",
-      href: "/",
-    },
-  ];
-  return (
-    <div className="container flex flex-col sm:flex-row gap-4 my-8 md:my-12">
-      {vacancies.map((vacancy, index) => (
-        <Vacancy {...vacancy} key={index} />
-      ))}
-    </div>
-  );
+  if (vacancies.length > 0)
+    return (
+      <div className="container flex flex-col sm:flex-row gap-4 my-8 md:my-12">
+        {vacancies.map((vacancy, index) => (
+          <Vacancy {...vacancy} key={index} />
+        ))}
+      </div>
+    );
+  else
+    return (
+      <h2 className="text-2xl font-semibold py-6 md:py-12 container">
+        We are not hiring <span className="text-highlight">at the moment.</span>
+      </h2>
+    );
 };
 
 export default Vacancies;

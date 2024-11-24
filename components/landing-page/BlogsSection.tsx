@@ -6,7 +6,7 @@ import AnimateInView from "../animate/AnimateInView";
 
 const BlogsSection = () => {
   return (
-    <section className="my-8 md:my-12 py-8 md:py-12 bg-[#4874AE1A]/10">
+    <section className="my-8 md:my-12 py-8 md:py-12">
       <div className="container">
         <h1 className="text-2xl font-semibold text-center">
           Our <span className="text-highlight">Blogs</span>
@@ -72,11 +72,13 @@ const BlogsSection = () => {
             </AnimateInView>
           </div>
         </div>
-        <Button className="rounded-full" size="lg" asChild>
-          <Link href="/blogs" className="flex justify-center">
-            Explore More
-          </Link>
-        </Button>
+        <div className="flex justify-center">
+          <Button className="rounded-full" size="lg" asChild>
+            <Link href="/blogs" className="mx-auto">
+              Explore More
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );

@@ -1,7 +1,8 @@
 import React from "react";
 import AnimateInView from "@/components/animate/AnimateInView";
 import { HeroGradient } from "@/components/HeroGradient";
-import Image from "next/image";
+import { SVGLoader } from "@/components/SVGLoader";
+import AnnouncementSVG from "@/public/assets/svgs/Marketing.svg";
 
 const DevelopmentHero = () => {
   return (
@@ -17,14 +18,15 @@ const DevelopmentHero = () => {
           business forward
         </p>
       </AnimateInView>
-      <AnimateInView type="slide-in" className="relative flex-1 w-full">
-        <Image
+      <AnimateInView type="slide-in" className="relative flex-1" addBounce>
+        {/* <Image
           src="/assets/svgs/development.svg"
           alt=""
           width={800}
           height={800}
           priority
-        />
+        /> */}
+        <SVGLoader src={AnnouncementSVG} alt="" />
       </AnimateInView>
     </HeroGradient>
   );

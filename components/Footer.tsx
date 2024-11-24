@@ -1,18 +1,17 @@
+import React from "react";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import Logo from "@/public/aavatech_logo.png";
 
 const Footer = () => {
   return (
     <footer className="bg-main-gradient text-white space-y-4">
       <div className="container grid grid-cols-2 md:grid-cols-4 items-baseline place-items-center gap-4 py-6">
         <div className="space-y-3">
-          <div className="relative size-20">
+          <div className="relative w-20">
             <Image
-              src="/aavatech_logo.png"
-              fill
-              sizes="80px"
+              src={Logo}
               alt="Aava Technology"
               className="object-contain"
             />

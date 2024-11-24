@@ -17,7 +17,11 @@ const MarketingHero = () => {
           business forward
         </p>
       </AnimateInView>
-      <AnimateInView type="slide-in" className="relative size-full flex-1">
+      <AnimateInView
+        type="slide-in"
+        className="relative size-full flex-1"
+        addBounce
+      >
         <Image
           src="/assets/svgs/Marketing.svg"
           alt=""

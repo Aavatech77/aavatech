@@ -1,8 +1,8 @@
+import React from "react";
 import AnimateInView from "@/components/animate/AnimateInView";
 import { HeroGradient } from "@/components/HeroGradient";
 import Image from "next/image";
-import React from "react";
-
+import ContactHeroImage from "@/public/assets/contact/rb_2148887720.png";
 const ContactHero = () => {
   return (
     <HeroGradient>
@@ -17,12 +17,13 @@ const ContactHero = () => {
           business forward
         </p>
       </AnimateInView>
-      <AnimateInView type="slide-in" className="relative size-full flex-1">
+      <AnimateInView type="slide-in" className="relative flex-1" addBounce>
         <Image
-          src="/assets/svgs/contact.svg"
+          src={ContactHeroImage}
           alt=""
           width={800}
           height={800}
+          className="object-cover"
           priority
         />
       </AnimateInView>

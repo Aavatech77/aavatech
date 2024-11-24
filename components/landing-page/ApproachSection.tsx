@@ -32,7 +32,7 @@ const content: IApproach[] = [
 
 const ApproachSection = () => {
   return (
-    <section className="bg-[#4874AE1A]/10 py-8 md:py-12 space-y-2">
+    <section className="py-8 md:py-12 space-y-2">
       <div className="container">
         <h1 className="font-semibold text-2xl text-center">
           Our <span className="text-highlight">Approach</span>

@@ -12,7 +12,7 @@ type CardProps = {
 
 const CardHorizontal = ({ title, description, href, img }: CardProps) => {
   return (
-    <div className="rounded-3xl shadow-lg grid grid-cols-[2fr_1fr] overflow-hidden">
+    <div className="rounded-3xl shadow-lg grid grid-cols-[2fr_1fr] overflow-hidden bg-white">
       <div className="pl-4 py-6 space-y-4">
         <h2 className="font-semibold text-xl">{title}</h2>
         <p>{description}</p>
@@ -35,7 +35,7 @@ const CardHorizontal = ({ title, description, href, img }: CardProps) => {
 
 const CardVertical = ({ title, description, href, img }: CardProps) => {
   return (
-    <div className="rounded-3xl shadow-lg grid overflow-hidden">
+    <div className="rounded-3xl shadow-lg grid overflow-hidden bg-white">
       <div className="relative size-full overflow-hidden">
         <Image
           src={img}

@@ -60,10 +60,10 @@ const services: IServices[] = [
 
 const ServicesSection = () => {
   return (
-    <section className="my-8 md:my-12 py-8 md:py-12 bg-[#4874AE1A]/10">
+    <section className="py-6 md:py-12">
       <div className="container">
         <h1 className="font-semibold text-2xl text-center">
-          Our <span className="text-highlight">services</span>
+          Our <span className="text-highlight">Services</span>
           <br />
           Outstanding Solutions to Fuel Your{" "}
           <span className="text-[#4874AE]">Business Growth</span>

@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useRef } from "react";
 import { motion } from "motion/react";
 
 type TDirection =
@@ -13,28 +13,29 @@ type TDirection =
 type Props = {
   children: ReactNode;
   className?: string;
-  type: "slide-in" | "fade-in" | "scale" | "scale-and-fade";
+  type: "slide-in" | "fade-in" | "scale" | "scale-and-fade" | "bounce";
   direction?: TDirection;
   duration?: number;
   delay?: number;
+  addBounce?: boolean;
 };
 
 const slideVariants = {
   left: {
-    initial: { x: "-100%" },
-    whileInView: { x: 0 },
+    initial: { x: "-100%", opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
   },
   right: {
-    initial: { x: "100%" },
-    whileInView: { x: 0 },
+    initial: { x: "100%", opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
   },
   top: {
-    initial: { y: "-100%" },
-    whileInView: { y: 0 },
+    initial: { y: "-100%", opacity: 0 },
+    whileInView: { y: 0, opacity: 1 },
   },
   bottom: {
-    initial: { y: "100%" },
-    whileInView: { y: 0 },
+    initial: { y: "100%", opacity: 0 },
+    whileInView: { y: 0, opacity: 1 },
   },
   "top-right": {
     initial: {
@@ -122,6 +123,14 @@ const scaleAndFadeVariant = {
     scale: 1,
   },
 };
+const bounceVariants = {
+  initial: {
+    y: 0,
+  },
+  whileInView: {
+    y: -40,
+  },
+};
 
 const getAnimation = (animationType: string, direction: TDirection) => {
   switch (animationType) {
@@ -133,6 +142,8 @@ const getAnimation = (animationType: string, direction: TDirection) => {
       return scaleVariant;
     case "scale-and-fade":
       return scaleAndFadeVariant;
+    case "bounce":
+      return bounceVariants;
     default:
       return fadeInVariants[direction];
   }
@@ -145,16 +156,29 @@ const AnimateInView = ({
   direction = "right",
   duration = 0.3,
   delay = 0,
+  addBounce,
 }: Props) => {
   const { initial, whileInView } = getAnimation(type, direction);
+  const ref = useRef<HTMLDivElement>(null);
   return (
-    <div className={`relative ${className}`}>
+    <div ref={ref} className={`relative ${className}`}>
       <motion.div
         initial={initial}
         whileInView={whileInView}
-        transition={{ duration, delay }}
+        transition={{
+          duration,
+          delay,
+        }}
         viewport={{ once: true }}
         className="absolute inset-0"
+        onAnimationComplete={() => {
+          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
+          addBounce &&
+            ref.current?.classList.add(
+              "animate-bounce",
+              "hover:[animation-play-state:_paused]"
+            );
+        }}
       >
         <div className="w-full h-full">{children}</div>
       </motion.div>

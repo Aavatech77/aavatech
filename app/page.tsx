@@ -12,12 +12,12 @@ export default function Home() {
     <>
       <HeroSection />
       <LandingPageAbout />
+      <PortfolioSection />
       <ServicesSection />
       <MasterySection />
       <ApproachSection />
       <Testimonials />
       <BlogsSection />
-      <PortfolioSection />
     </>
   );
 }
