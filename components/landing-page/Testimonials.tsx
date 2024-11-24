@@ -81,7 +81,7 @@ const Testimonials = () => {
                 <p
                   className={cn(
                     "line-clamp-4 md:line-clamp-4 lg:line-clamp-3 xl:line-clamp-4 w-[90%] sm:w-[60%] md:w-full text-sm xl:px-4",
-                    index === 1 && "md:w-[90%] xl:w-[70%]"
+                    index === 1 && "md:w-[90%] xl:w-[70%] 2xl:w-[60%]"
                   )}
                 >
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.
