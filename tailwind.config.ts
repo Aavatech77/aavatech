@@ -17,6 +17,8 @@ export default {
         "main-gradient":
           "linear-gradient(180.71deg, rgba(72, 116, 174, 0.7) 0.61%, #4874AE 99.39%)",
         "secondary-gradient": "linear-gradient(0deg, #698dbc, #b6b1b1)",
+        "footer-gradient":
+          "linear-gradient(50deg, rgb(154, 178, 206) 0.61%, #7d8cc1 99.39%)",
       },
       colors: {
         highlight: "#4874AE",

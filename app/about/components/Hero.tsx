@@ -1,42 +1,47 @@
-import { HeroGradient } from "@/components/HeroGradient";
-import Image from "next/image";
+import {
+  ConnectingLines,
+  FloatingElements,
+  FloatingElementsProps,
+  HeroContainer,
+  HeroContent,
+  HeroTitle,
+} from "@/components/HeroComponents";
 import React from "react";
-import HeroImg from "@/public/assets/about-page/hero.png";
-import AnimateInView from "@/components/animate/AnimateInView";
+import { Code } from "lucide-react";
+import { FaHandsHelping } from "react-icons/fa";
+import { FaPeopleGroup } from "react-icons/fa6";
 
 function Hero() {
+  const props: FloatingElementsProps = {
+    icons: [
+      <FaPeopleGroup
+        className="w-8 h-8 text-primary mb-2 mx-auto"
+        key={"marketing hero"}
+      />,
+      <Code
+        className="w-8 h-8 text-primary mb-2 mx-auto"
+        key="development hero"
+      />,
+      <FaHandsHelping
+        className="w-8 h-8 text-primary mb-2 mx-auto"
+        key="consultation hero"
+      />,
+    ],
+    labels: ["Marketing", "Development", "Consultation"],
+  };
   return (
-    <HeroGradient>
-      <AnimateInView type="fade-in" direction="bottom" className="flex-1">
-        <div className="">
-          <h1 className="font-bold text-3xl mb-4">
-            Transform Your Business with Innovative IT Solutions.
-          </h1>
-          <p className="mb-8">
-            We deliver cutting-edge software development, cloud solutions, and
-            IT consulting to drive your business forward. We deliver
-            cutting-edge software development, cloud solutions, and IT
-            consulting to drive your business forward
-          </p>
-        </div>
-      </AnimateInView>
-      <AnimateInView
-        type="slide-in"
-        className="relative min-h-[300px] w-full mx-auto flex-1"
-        addBounce
-      >
-        <div className="relative size-full min-h-[400px]">
-          <Image
-            src={HeroImg}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            alt="hero image"
-            className="object-contain"
-            priority
-          />
-        </div>
-      </AnimateInView>
-    </HeroGradient>
+    <HeroContainer>
+      <HeroContent>
+        <HeroTitle
+          main="Transform Your Business with"
+          secondary="Innovative IT Solutions"
+          subtitle="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus quae cum ab optio veniam ipsa, illum neque laboriosam iure eius."
+        />
+        <FloatingElements icons={props.icons} labels={props.labels}>
+          <ConnectingLines />
+        </FloatingElements>
+      </HeroContent>
+    </HeroContainer>
   );
 }
 

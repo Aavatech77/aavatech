@@ -20,12 +20,12 @@ const CardHorizontal = ({ title, description, href, img }: CardProps) => {
           More Details <ArrowRight />
         </Link>
       </div>
-      <div className="relative size-full ">
+      <div className="relative size-full overflow-hidden">
         <Image
           src={img}
           width={400}
           height={400}
-          className="object-cover size-full"
+          className="object-cover size-full hover:scale-150 transition-transform duration-700"
           alt=""
         />
       </div>
@@ -36,7 +36,7 @@ const CardHorizontal = ({ title, description, href, img }: CardProps) => {
 const CardVertical = ({ title, description, href, img }: CardProps) => {
   return (
     <div className="rounded-3xl shadow-lg grid overflow-hidden bg-white">
-      <div className="relative size-full overflow-hidden">
+      <div className="relative overflow-hidden">
         <Image
           src={img}
           width={400}

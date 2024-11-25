@@ -18,7 +18,7 @@ interface CarouselProps {
   items: CarouselItem[];
 }
 const InfiniteCarousel: React.FC<CarouselProps> = ({ items }) => {
-  const [duplicateCount, setDuplicateCount] = useState(2);
+  const [duplicateCount, setDuplicateCount] = useState(5);
   const baseVelocity = -0.5;
   const baseX = useMotionValue(0);
   const x = useTransform(baseX, (v) => `${v}px`);

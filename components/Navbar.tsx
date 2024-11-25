@@ -126,14 +126,14 @@ const MobileNav: React.FC<MobileNavProps> = ({
         aria-haspopup="true"
         aria-controls="menu"
         aria-expanded={isOpen}
-        className="p-2 relative z-[51]"
+        className="p-2"
       >
-        {isOpen ? <X /> : <Menu />}
+        <Menu />
       </button>
       <div
         ref={menuRef}
         className={cn(
-          "fixed top-0 right-0 min-w-[200px] transition-all duration-200 flex flex-col gap-4 bg-main-gradient h-screen p-4 backdrop-blur-lg",
+          "fixed top-0 right-0 min-w-[200px] transition-all duration-200 flex flex-col gap-4 bg-gradient-to-b from-slate-900 via-slate-900 to-slate-800 h-screen p-4 backdrop-blur-lg",
           isOpen
             ? "translate-x-0 z-50 opacity-100"
             : "translate-x-[200px] opacity-0"
@@ -141,6 +141,9 @@ const MobileNav: React.FC<MobileNavProps> = ({
         id="menu"
         role="menu"
       >
+        <button className="absolute right-4" onClick={toggleMenu}>
+          <X />
+        </button>
         <ul className="mt-12 space-y-2">
           {MENU_ITEMS.map((item) => (
             <li
@@ -196,7 +199,7 @@ export default function NavBar() {
 
   return (
     <header className="text-white absolute h-16 w-full top-0 left-0 shadow-sm py-4 flex items-center">
-      <nav className="container relative z-20">
+      <nav className="container relative z-50">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
             <Link href="/" className="w-24">
@@ -281,7 +284,6 @@ export default function NavBar() {
           />
         </div>
       </nav>
-      {/* <div className="absolute top-0 left-1/2 -translate-x-1/2 tr w-1/2 h-36 rounded-b-full bg-slate-200 blur-xl z-10"></div> */}
     </header>
   );
 }

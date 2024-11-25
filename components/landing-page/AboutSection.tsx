@@ -30,7 +30,7 @@ const LandingPageAbout = () => {
         <Image
           src={PersonImage}
           alt="A person using Laptop"
-          className="object-contain"
+          className="object-contain mx-auto"
         />
       </AnimateInView>
     </section>

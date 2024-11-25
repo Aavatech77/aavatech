@@ -87,3 +87,74 @@ body {
     @apply size-8 rounded-full bg-gray-200 flex justify-center items-center p-2;
   }
 }
+
+footer {
+  color: rgb(203 213 225);
+  font-weight: 300;
+  font-size: 0.875rem;
+  div.footer__grid {
+    padding-inline: 1rem;
+    display: grid;
+    grid-template-areas:
+      ". a a b c d ."
+      ". a a b c d ."
+      ". a a b c d ."
+      ". a a b c d .";
+    gap: 0.5rem 2rem;
+
+    .footer__info {
+      grid-area: a;
+      display: grid;
+      grid-template-rows: subgrid;
+      .info__img {
+        position: relative;
+        width: 5rem;
+      }
+    }
+    .footer__about {
+      grid-area: b;
+      display: grid;
+      grid-template-rows: subgrid;
+      .about__links {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .footer__contact {
+      grid-area: c;
+      display: grid;
+      grid-template-rows: subgrid;
+    }
+    .footer__socials {
+      grid-area: d;
+      display: grid;
+      grid-template-rows: subgrid;
+    }
+
+    .footer__title {
+      font-weight: 600;
+      margin-block-start: auto;
+      + .social__links {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-block-start: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    div.footer__grid {
+      grid-template-areas:
+        "a a b b"
+        "a a b b"
+        "a a b b"
+        ". . . ."
+        "c c d d"
+        "c c d d"
+        "c c d d";
+    }
+  }
+}

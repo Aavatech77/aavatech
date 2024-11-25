@@ -1,36 +1,47 @@
 import React from "react";
-import AnimateInView from "@/components/animate/AnimateInView";
-import { HeroGradient } from "@/components/HeroGradient";
-import Image from "next/image";
+import {
+  ConnectingLines,
+  FloatingElements,
+  FloatingElementsProps,
+  HeroContainer,
+  HeroContent,
+  HeroTitle,
+} from "@/components/HeroComponents";
+import { CgWebsite } from "react-icons/cg";
+import { MdMobileScreenShare } from "react-icons/md";
+import { HiOutlineDeviceMobile } from "react-icons/hi";
 
 const MarketingHero = () => {
+  const props: FloatingElementsProps = {
+    icons: [
+      <MdMobileScreenShare
+        className="w-8 h-8 text-primary mb-2 mx-auto"
+        key="digital marketing"
+      />,
+      <CgWebsite
+        className="w-8 h-8 text-primary mb-2 mx-auto"
+        key="graphic designing"
+      />,
+      <HiOutlineDeviceMobile
+        className="w-8 h-8 text-primary mb-2 mx-auto"
+        key="content creation"
+      />,
+    ],
+    labels: ["Digital Marketing", "Graphic Design", "Content Creation"],
+  };
   return (
-    <HeroGradient>
-      <AnimateInView type="fade-in" direction="bottom" className="pr-4 flex-1">
-        <h1 className="font-bold text-2xl md:text-5xl mb-4">
-          Transform Your Business with Innovative IT Solutions.
-        </h1>
-        <p className="mb-8 pr-4">
-          We deliver cutting-edge software development, cloud solutions, and IT
-          consulting to drive your business forward. We deliver cutting-edge
-          software development, cloud solutions, and IT consulting to drive your
-          business forward
-        </p>
-      </AnimateInView>
-      <AnimateInView
-        type="slide-in"
-        className="relative size-full flex-1"
-        addBounce
-      >
-        <Image
-          src="/assets/svgs/Marketing.svg"
-          alt=""
-          width={800}
-          height={800}
-          priority
+    <HeroContainer>
+      <HeroContent>
+        <HeroTitle
+          main="Join Our Team and"
+          secondary="Grow with Us"
+          subtitle="We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward. We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward."
         />
-      </AnimateInView>
-    </HeroGradient>
+        <FloatingElements icons={props.icons} labels={props.labels}>
+          <ConnectingLines />
+        </FloatingElements>
+      </HeroContent>
+    </HeroContainer>
   );
 };
 

@@ -6,41 +6,43 @@ import Logo from "@/public/aavatech_logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-main-gradient text-white space-y-4">
-      <div className="container grid grid-cols-2 md:grid-cols-4 items-baseline place-items-center gap-4 py-6">
-        <div className="space-y-3">
-          <div className="relative w-20">
+    <footer className="relative bg-gradient-to-t from-slate-900 via-slate-900 to-slate-800">
+      <div className="footer__grid">
+        <div className="footer__info">
+          <div className="info__img">
             <Image
               src={Logo}
               alt="Aava Technology"
               className="object-contain"
             />
           </div>
-          <p>
+          <p className="info__text">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus, doloribus?
+            Necessitatibus, doloribus? Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Rerum, laborum!
           </p>
-          <p className="break-all">info@aavatechnepal.com</p>
+          <p className="info__mail">info@aavatechnepal.com</p>
         </div>
-        <div className="space-y-3">
-          <p className="font-medium">About Us</p>
-          <div className="flex flex-col gap-2">
-            <Link href="/">Company</Link>
-            <Link href="/">Portfolio</Link>
+        <div className="footer__about">
+          <p className="footer__title">About</p>
+          <div className="about__links">
+            <Link href="/about">Our Company</Link>
+            <Link href="/industries">Our Industries</Link>
             <Link href="/careers">Careers</Link>
+            <Link href="/blogs">Blogs</Link>
           </div>
         </div>
-        <div className="space-y-3">
-          <p className="font-medium">Contact Us</p>
+        <div className="footer__contact">
+          <p className="footer__title">Contact Us</p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-            deleniti officia vel in cupiditate consequuntur.
+            deleniti officia vel in cupiditate consequuntur. lorem10
           </p>
           <p>+977 9876543210</p>
         </div>
-        <div className="space-y-3">
-          <p className="font-medium">Our Socials</p>
-          <div className="flex gap-2">
+        <div className="footer__socials">
+          <p className="footer__title">Our Socials</p>
+          <div className="social__links">
             <Link
               href="https://www.facebook.com/aavatech"
               className="social-icon"
@@ -68,10 +70,14 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <hr />
-      <p className="text-center text-xs">
+      <hr className="border-none h-[1px] bg-gradient-to-r from-blue-950 to-slate-700" />
+      <p className="text-center text-xs pt-2 pb-4">
         Copyright &copy;Aava Technology, All Rights Reserved
       </p>
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-1/2 -right-1/2 w-full h-full bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-1/2 -left-1/2 w-full h-full bg-primary/5 rounded-full blur-3xl" />
+      </div>
     </footer>
   );
 };
