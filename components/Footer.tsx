@@ -6,7 +6,7 @@ import Logo from "@/public/aavatech_logo.png";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-t from-slate-900 via-slate-900 to-slate-800">
+    <footer className="relative bg-gradient-to-t from-slate-900 via-slate-900 to-slate-800 py-6">
       <div className="footer__grid">
         <div className="footer__info">
           <div className="info__img">
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="border-none h-[1px] bg-gradient-to-r from-blue-950 to-slate-700" />
-      <p className="text-center text-xs pt-2 pb-4">
+      <p className="text-center text-xs pt-2">
         Copyright &copy;Aava Technology, All Rights Reserved
       </p>
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
