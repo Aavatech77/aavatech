@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const SubscribeToNewsLetter = () => {
   return (
-    <section className="relative my-8 md:my-12 bg-[url('/assets/landing-page/library-architecture.png')] bg-center">
+    <section className="relative mt-8 md:mt-12 bg-[url('/assets/landing-page/library-architecture.png')] bg-center">
       <div className="container grid md:grid-cols-2 gap-4 md:gap-8 py-8 md:py-12 relative z-10">
         <div className="space-y-4">
           <h1 className="font-semibold text-2xl">
