@@ -1,83 +1,86 @@
 "use client";
-
-import React, { useEffect, useRef, useState } from "react";
 import Image, { StaticImageData } from "next/image";
-import {
-  motion,
-  useAnimationFrame,
-  useMotionValue,
-  useTransform,
-} from "motion/react";
+import React, { useState, useEffect, useRef } from "react";
 
+// Define the shape of a carousel item
 export interface CarouselItem {
   image: string | StaticImageData;
   alt: string;
 }
 
-interface CarouselProps {
+// Props interface for the InfiniteCarousel component
+interface InfiniteCarouselProps {
   items: CarouselItem[];
+  className?: string;
+  speed?: number;
+  itemWidth?: number;
+  gap?: number;
 }
-const InfiniteCarousel: React.FC<CarouselProps> = ({ items }) => {
-  const [duplicateCount, setDuplicateCount] = useState(5);
-  const baseVelocity = -0.5;
-  const baseX = useMotionValue(0);
-  const x = useTransform(baseX, (v) => `${v}px`);
 
-  const containerRef = useRef<HTMLDivElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
+const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
+  items,
+  speed = 0.5,
+  itemWidth = 60,
+  gap = 20,
+}) => {
+  const [position, setPosition] = useState<number>(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const requestRef = useRef<number | null>(null);
+
+  // Duplicate items to create infinite scroll effect
+  const displayItems: CarouselItem[] = [...items, ...items, ...items, ...items];
 
   useEffect(() => {
-    const updateDuplicateCount = () => {
-      if (containerRef.current && innerRef.current) {
-        const containerWidth = containerRef.current.offsetWidth;
-        const innerWidth = innerRef.current.offsetWidth / duplicateCount;
-        const newCount = Math.ceil(containerWidth / innerWidth) + 1;
-        setDuplicateCount(newCount);
-      }
+    const animate = () => {
+      // Move carousel to the left
+      setPosition((prevPosition) => {
+        const newPosition = prevPosition - speed;
+
+        // Reset position when items fully scroll out
+        if (Math.abs(newPosition) >= (itemWidth + gap) * items.length) {
+          return 0;
+        }
+
+        return newPosition;
+      });
+
+      requestRef.current = requestAnimationFrame(animate);
     };
 
-    updateDuplicateCount();
-    window.addEventListener("resize", updateDuplicateCount);
-    return () => window.removeEventListener("resize", updateDuplicateCount);
-  }, [duplicateCount]);
+    requestRef.current = requestAnimationFrame(animate);
 
-  useAnimationFrame((t, delta) => {
-    if (containerRef.current && innerRef.current) {
-      const moveBy = baseVelocity * (delta / 10);
-      let newX = baseX.get() + moveBy;
-
-      if (newX <= -innerWidth) {
-        newX += innerWidth;
+    return () => {
+      if (requestRef.current) {
+        cancelAnimationFrame(requestRef.current);
       }
-      baseX.set(newX);
-    }
-  });
+    };
+  }, [items, speed, itemWidth, gap]);
 
   return (
-    <div ref={containerRef} className="relative overflow-hidden w-full h-16">
-      <motion.div
-        ref={innerRef}
-        className="flex absolute top-0 left-0 h-full"
-        style={{ x }}
+    <div
+      ref={carouselRef}
+      className="overflow-hidden relative w-full"
+      style={{ height: `${itemWidth}px` }}
+    >
+      <div
+        className="flex absolute top-0 left-0 transition-transform duration-0"
+        style={{
+          transform: `translateX(${position}px)`,
+          gap: `${gap}px`,
+        }}
       >
-        {Array(duplicateCount)
-          .fill(items)
-          .flat()
-          .map((item, index) => (
-            <div
-              key={index}
-              className="flex-shrink-0 size-16 mx-2 grid place-content-center"
-            >
-              <Image
-                src={item.image}
-                alt={item.alt}
-                width={80}
-                height={80}
-                className="object-contain"
-              />
-            </div>
-          ))}
-      </motion.div>
+        {displayItems.map((item, index) => (
+          <div
+            key={index}
+            className="flex-shrink-0 flex items-center justify-center relative"
+            style={{
+              width: `${itemWidth}px`,
+            }}
+          >
+            <Image src={item.image} alt={item.alt} className="object-contain" />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

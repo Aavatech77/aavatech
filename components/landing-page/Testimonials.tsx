@@ -46,13 +46,13 @@ const Testimonials = () => {
           What People Say <span className="text-highlight">About Us</span>
         </h2>
       </div>
-      <div className="md:max-w-[calc(100vw_-_4rem)] mx-auto grid gap-4 md:grid-cols-2 grid-flow-row lg:grid-cols-[minmax(200px,1fr)_minmax(400px,_1.5fr)_minmax(200px,1fr)]">
+      <div className="flex mx-auto gap-4 grid-flow-row lg:grid lg:grid-cols-[minmax(200px,1fr)_minmax(400px,_1.5fr)_minmax(200px,1fr)] overflow-x-auto scroll-smooth snap-x snap-mandatory px-10 lg:px-0">
         {testimonials.map((testimonial, index) => (
           <div
-            className="min-h-[300px]"
+            className="md:min-h-[300px] flex-shrink-0 snap-center"
             key={`${testimonial.username}${index}`}
           >
-            <div className="relative">
+            <div className="relative w-[calc(100vw_-_60px)] lg:size-auto">
               <Vector1 />
               <Vector2 />
               <div className="absolute top-0 left-0 px-12 translate-y-[20%] w-full flex flex-col items-center space-y-2">
@@ -80,8 +80,8 @@ const Testimonials = () => {
                 </p>
                 <p
                   className={cn(
-                    "line-clamp-4 md:line-clamp-4 lg:line-clamp-3 xl:line-clamp-4 w-[90%] sm:w-[60%] md:w-full text-sm xl:px-4",
-                    index === 1 && "md:w-[90%] xl:w-[70%] 2xl:w-[60%]"
+                    "line-clamp-4 md:line-clamp-4 lg:line-clamp-3 xl:line-clamp-4 w-[90%] sm:w-[70%] md:w-[60%] text-sm xl:px-4",
+                    index === 1 && "md:w-[65%] xl:w-[70%] 2xl:w-[60%]"
                   )}
                 >
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit.

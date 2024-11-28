@@ -5,32 +5,30 @@ import {
   quoteRequestValidationSchema,
 } from "@/constants/validation-schemas/validation";
 
-export const bookConsultant = async (prevState: any, formData: FormData) => {
+export const bookConsultant = async (formData: FormData) => {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const data = Object.fromEntries(formData.entries());
-  //   console.log(data);
+  console.log(data);
   const { success, error } = consultationValidationSchema.safeParse(data);
   if (!success) {
-    const errorList = error?.errors.map((err) => {
-      return { path: err.path[0], msg: err.message };
-    });
-    console.log(error.errors);
-    console.log({ errorList });
-    return { errors: errorList, success: false, data };
+    return {
+      errors: error.flatten().fieldErrors,
+      success: false,
+      data,
+    };
   }
-  return { errors: null, success: true, data };
+  return { success: true, data };
 };
 
-export const requestQuote = async (prevState: any, formData: FormData) => {
+export const requestQuote = async (formData: FormData) => {
   const data = Object.fromEntries(formData.entries());
-  //   console.log(data);
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const { success, error } = quoteRequestValidationSchema.safeParse(data);
   if (!success) {
-    const errorList = error?.errors.map((err) => {
-      return { path: err.path[0], msg: err.message };
-    });
-    console.log(error.errors);
-    console.log({ errorList });
-    return { errors: errorList, success: false, data };
+    return {
+      errors: error.flatten().fieldErrors,
+      success: false,
+    };
   }
-  return { errors: null, success: true, data };
+  return { success: true, data };
 };

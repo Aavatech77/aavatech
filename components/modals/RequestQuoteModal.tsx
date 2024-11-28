@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import FloatingLabelInput from "../ui/floating-label-input";
 import {
   Dialog,
@@ -12,26 +12,60 @@ import {
 import { Button } from "../ui/button";
 import ErrorMessage from "../ErrorMessage";
 import { requestQuote } from "@/actions/actions";
-import { useFormState } from "react-dom";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { quoteRequestValidationSchema } from "@/constants/validation-schemas/validation";
+import { useToast } from "@/hooks/use-toast";
+
+type FormInputs = {
+  name: string;
+  email: string;
+  contactNo: string;
+  description: string;
+  budget: string;
+  timeline: string;
+};
 
 const RequestQuoteModal = () => {
-  const initialState = {
-    errors: [],
-    success: false,
-    data: {},
-  };
-  const [state, formAction] = useFormState(requestQuote, initialState);
+  const { toast } = useToast();
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  const filterErrorMessage = (path: string): string | null => {
-    const errorList = state?.errors;
-    if (errorList && errorList.length > 0) {
-      const err = errorList.find((error) => error.path === path);
-      return err ? err.msg : null;
-    }
-    return null;
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<FormInputs>({
+    mode: "onChange",
+    resolver: zodResolver(quoteRequestValidationSchema),
+  });
+
+  const onSubmit = async (data: FormInputs) => {
+    const formData = new FormData();
+    Object.entries(data).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+
+    const response = await requestQuote(formData);
+    if (response.success) {
+      setIsDialogOpen(false);
+      reset();
+      toast({
+        title: "Your request has been submitted successfully",
+      });
+    } else
+      toast({
+        variant: "destructive",
+        title: "Failed to submit your request",
+        description: `Request failed: ${response.message}`,
+      });
   };
+
   return (
-    <Dialog>
+    <Dialog
+      open={isDialogOpen}
+      onOpenChange={() => setIsDialogOpen(!isDialogOpen)}
+    >
       <DialogTrigger asChild>
         <Button variant={"secondary"} size="lg">
           Request a Quote
@@ -44,49 +78,57 @@ const RequestQuoteModal = () => {
             Request quote for a project
           </DialogDescription>
         </DialogHeader>
-        <form action={formAction} className="space-y-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div className="space-y-1">
             <FloatingLabelInput label="Name">
-              <input type="text" name="name" required />
+              <input type="text" {...register("name")} required />
             </FloatingLabelInput>
-            <ErrorMessage msg={filterErrorMessage("name")} />
+            <ErrorMessage msg={errors.name?.message} />
           </div>
           <div className="space-y-1">
             <FloatingLabelInput label="Email">
-              <input type="email" name="email" required />
+              <input type="email" {...register("email")} required />
             </FloatingLabelInput>
-            <ErrorMessage msg={filterErrorMessage("email")} />
+            <ErrorMessage msg={errors.email?.message} />
           </div>
           <div className="space-y-1">
             <FloatingLabelInput label="Contact No.">
-              <input type="tel" name="contactNo" required />
+              <input type="tel" {...register("contactNo")} required />
             </FloatingLabelInput>
-            <ErrorMessage msg={filterErrorMessage("contactNo")} />
+            <ErrorMessage msg={errors.contactNo?.message} />
           </div>
           <div className="space-y-1">
             <FloatingLabelInput label="Timeline (In Months)">
-              <input type="tel" name="timeline" required />
+              <input type="tel" {...register("timeline")} required />
             </FloatingLabelInput>
-            <ErrorMessage msg={filterErrorMessage("timeline")} />
+            <ErrorMessage msg={errors.timeline?.message} />
           </div>
           <div className="space-y-1">
             <FloatingLabelInput label="Budget (In NRS)">
-              <input type="tel" name="budget" required />
+              <input type="tel" {...register("budget")} required />
             </FloatingLabelInput>
-            <ErrorMessage msg={filterErrorMessage("budget")} />
+            <ErrorMessage msg={errors.budget?.message} />
           </div>
           <div className="space-y-1">
             <FloatingLabelInput label="Description">
-              <textarea name="description" />
+              <textarea {...register("description")} required />
             </FloatingLabelInput>
-            <ErrorMessage msg={filterErrorMessage("description")} />
+            <ErrorMessage msg={errors.description?.message} />
           </div>
-          {/* {JSON.stringify(state)} */}
           <div className="flex gap-4 justify-end">
-            <Button variant="ghost" type="reset">
+            <Button
+              variant="ghost"
+              type="reset"
+              onClick={(e) => {
+                e.preventDefault();
+                reset();
+              }}
+            >
               Clear
             </Button>
-            <Button type="submit">Submit</Button>
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Submitting..." : "Submit"}
+            </Button>
           </div>
         </form>
       </DialogContent>
@@ -95,6 +137,3 @@ const RequestQuoteModal = () => {
 };
 
 export default RequestQuoteModal;
-
-// name email contact || description date category
-//                    || project description timeline budget
