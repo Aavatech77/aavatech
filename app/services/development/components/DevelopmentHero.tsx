@@ -37,9 +37,9 @@ const DevelopmentHero = () => {
     <HeroContainer>
       <HeroContent>
         <HeroTitle
-          main="Join Our Team and"
-          secondary="Grow with Us"
-          subtitle="We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward. We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward."
+          main="Tailored Software Solutions for "
+          secondary="Business Growth."
+          subtitle="Our expert team collaborates closely with you to develop scalable, high-quality applications that align with your specific goals. Whether optimizing operations or implementing innovative technologies, we bring your vision to life with impactful, real-world results."
         />
         <FloatingElements icons={props.icons} labels={props.labels}>
           <AdditionalFloatingItems />

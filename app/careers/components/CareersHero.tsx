@@ -31,7 +31,7 @@ const CareersHero = () => {
         <HeroTitle
           main="Join Our Team and"
           secondary="Grow with Us"
-          subtitle="We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward. We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward."
+          subtitle="At Aava Technology, we’re building a team of passionate innovators. Join us to work with cutting-edge technologies, collaborate with experts, and shape the future of tech in a growth-focused environment."
         />
         <FloatingElements icons={props.icons} labels={props.labels}>
           <ConnectingLines />

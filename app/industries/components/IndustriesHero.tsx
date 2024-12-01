@@ -46,7 +46,7 @@ const IndustriesHero = () => {
         <HeroTitle
           main="Transform Your Business with"
           secondary="Innovative IT Solutions"
-          subtitle="We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward. We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward."
+          subtitle="Aava Technology delivers innovative IT solutions across industries, including education, finance, healthcare, and travel, helping businesses unlock new potential, drive success, and stay ahead of the curve."
         />
 
         <FloatingElements icons={props.icons} labels={props.labels}>

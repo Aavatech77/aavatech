@@ -7,7 +7,7 @@ const Legal = () => {
       title="Legal Consultant"
       subtitle="Lorem ipsum dolor sit amet consectetur."
       content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veniam nisi modi alias excepturi beatae non repudiandae ea magni qui."
-      img="/assets/consultation-page/consultant.png"
+      img="/assets/consultation-page/legal-consultant.png"
     />
   );
 };

@@ -5,8 +5,8 @@ const Travel = () => {
   return (
     <LayoutWithImageOnRight
       title="Travel"
-      subtitle="Lorem ipsum dolor sit amet consectetur."
-      content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veniam nisi modi alias excepturi beatae non repudiandae ea magni qui."
+      subtitle="Making Every Journey Effortless with Advanced Travel Solutions"
+      content="We help the travel industry redefine customer experiences with booking systems, mobile applications, and AI-driven personalization, making every journey seamless and memorable."
       img="/assets/industries-page/travel.png"
     />
   );

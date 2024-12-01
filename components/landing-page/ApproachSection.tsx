@@ -9,23 +9,23 @@ interface IApproach {
 
 const content: IApproach[] = [
   {
-    title: "Prioritizing Citizen Science Initiatives",
+    title: "Prioritizing Customer Requirement",
     image: "/assets/landing-page/users.png",
   },
   {
-    title: "Participatory Approach Backed by Scientific Methods",
+    title: "Evaluating Industry Standards",
     image: "/assets/landing-page/badge.png",
   },
   {
-    title: "Social Technical Design",
+    title: "Scalable System Design",
     image: "/assets/landing-page/git.png",
   },
   {
-    title: "Open Source Software Solution",
+    title: "Robust Code",
     image: "/assets/landing-page/code.png",
   },
   {
-    title: "Open Data",
+    title: "Efficient Data Management",
     image: "/assets/landing-page/download.png",
   },
 ];

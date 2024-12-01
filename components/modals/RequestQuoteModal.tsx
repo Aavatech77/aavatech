@@ -57,7 +57,7 @@ const RequestQuoteModal = () => {
       toast({
         variant: "destructive",
         title: "Failed to submit your request",
-        description: `Request failed: ${response.message}`,
+        description: "Request failed",
       });
   };
 

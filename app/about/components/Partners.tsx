@@ -20,7 +20,9 @@ function Partners() {
   return (
     <div className="bg-[#4874AE]/10 py-6 md:py-12">
       <AnimateInView type="fade-in" className="mb-6">
-        <h1 className="text-3xl text-center">Our Partners and Collaborators</h1>
+        <h1 className="text-3xl font-semibold text-center">
+          Our Partners and Collaborators
+        </h1>
       </AnimateInView>
       {/* <AnimateInView type="scale">
         <div className="flex flex-wrap justify-between px-4">

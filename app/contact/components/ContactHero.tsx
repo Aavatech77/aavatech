@@ -28,9 +28,9 @@ const ContactHero = () => {
     <HeroContainer>
       <HeroContent>
         <HeroTitle
-          main="Join Our Team and"
-          secondary="Grow with Us"
-          subtitle="We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward. We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward."
+          main="Connecting Technology with"
+          secondary="Possibility"
+          subtitle=""
         />
         <FloatingElements icons={props.icons} labels={props.labels}>
           <ConnectingLines />

@@ -154,7 +154,7 @@ const AnimateInView = ({
   children,
   className = "",
   direction = "right",
-  duration = 0.3,
+  duration = 0.5,
   delay = 0,
   addBounce,
 }: Props) => {
@@ -179,6 +179,7 @@ const AnimateInView = ({
               "hover:[animation-play-state:_paused]"
             );
         }}
+        exit={{ opacity: 0 }}
       >
         <div className="w-full h-full">{children}</div>
       </motion.div>

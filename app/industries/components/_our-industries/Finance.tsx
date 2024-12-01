@@ -5,8 +5,8 @@ const Finance = () => {
   return (
     <LayoutWithImageOnRight
       title="Finance"
-      subtitle="Lorem ipsum dolor sit amet consectetur."
-      content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veniam nisi modi alias excepturi beatae non repudiandae ea magni qui."
+      subtitle="Driving Financial Excellence with Scalable Solutions"
+      content="Aava Tech delivers secure and scalable solutions for the financial sector. From fintech innovations to robust cybersecurity, we ensure your business remains competitive and compliant."
       img="/assets/industries-page/finance.png"
     />
   );

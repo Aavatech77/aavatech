@@ -13,11 +13,12 @@ const LandingPageAbout = () => {
           Who <span className="text-highlight">we are</span>
         </h1>
         <p className="mb-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, iusto
-          repellendus recusandae accusamus soluta libero porro perspiciatis
-          laborum fugiat. Quas alias architecto animi placeat mollitia suscipit
-          voluptatum dolor. Est, error autem in nemo eaque accusamus sit
-          pariatur quia delectus debitis.
+          We are a team of young, passionate innovators at Aava Technology,
+          driven by the desire to transform ideas into digital realities. With a
+          fresh perspective and a fearless approach, we craft cutting-edge web
+          development, software solutions, and digital marketing strategies that
+          push the boundaries of technology. At Aava, creativity meets
+          expertise, and together, we shape the future of tech.
         </p>
         <Button className="rounded-full" asChild>
           <Link href="/about">About Us</Link>

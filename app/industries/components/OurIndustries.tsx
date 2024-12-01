@@ -40,7 +40,7 @@ const OurIndustries = () => {
       <LayoutWithBorderLeft
         title="Industries"
         highlightText="we serve"
-        content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam dicta aliquid, atque autem asperiores nihil mollitia maiores officiis dolorem totam expedita provident similique non? Quia ducimus sunt debitis perspiciatis accusantium!"
+        content="At Aava Technology, we specialize in providing innovative IT solutions tailored to a wide range of industries. From education to finance, our expertise enables businesses to unlock new potential and drive lasting success."
       />
       <div className="bg-[#4874AE1A]/10 py-8">
         <Tabs options={tabs} setActiveTab={setActiveTab} />

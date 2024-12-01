@@ -8,38 +8,38 @@ const marketingServices: LayoutWithImageProps[] = [
   {
     title: "Digital",
     titleHighlight: "Marketing",
-    subtitle: "Lorem, ipsum dolor sit amet consectetur ",
-    subtitleHighlight: "adipisicing elit.",
+    subtitle: "Maximize Reach and Conversions with Data-Driven ",
+    subtitleHighlight: "Marketing Strategies",
     img: "/assets/services/marketing/digital-marketing.png",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, aliquam? Doloremque officiis inventore vero, voluptatibus consequuntur nulla eos beatae excepturi tempore maiores dolore, saepe est hic sit quaerat soluta tenetur?",
+      "Our digital marketing services combine SEO, PPC, and targeted campaigns to expand your reach and drive conversions. We leverage analytics to optimize your strategy, ensuring measurable results and long-term success in a digital-first world.",
   },
   {
     title: "Social Media",
     titleHighlight: "Marketing",
-    subtitle: "Lorem, ipsum dolor sit amet consectetur ",
-    subtitleHighlight: "adipisicing elit.",
+    subtitle: "Boost Brand Visibility and Drive Growth with Targeted Campaigns",
+    subtitleHighlight: "Targeted Campaigns",
     img: "/assets/services/marketing/social-marketing.png",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, aliquam? Doloremque officiis inventore vero, voluptatibus consequuntur nulla eos beatae excepturi tempore maiores dolore, saepe est hic sit quaerat soluta tenetur?",
+      "Our social media marketing strategies help you connect with your audience, increase engagement, and grow your brand presence. We create tailored campaigns that foster community, boost visibility, and drive results across platforms.",
   },
   {
     title: "Graphic",
     titleHighlight: "Design",
-    subtitle: "Lorem, ipsum dolor sit amet consectetur ",
-    subtitleHighlight: "adipisicing elit.",
+    subtitle: "Designing Visually Engaging Experiences that Speak to ",
+    subtitleHighlight: "Your Brand.",
     img: "/assets/services/marketing/graphic-design.png",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, aliquam? Doloremque officiis inventore vero, voluptatibus consequuntur nulla eos beatae excepturi tempore maiores dolore, saepe est hic sit quaerat soluta tenetur?",
+      "Our graphic design services transform ideas into stunning visuals that captivate and communicate. From logos to marketing materials, we craft designs that enhance brand identity, engage your audience, and leave a lasting impression.",
   },
   {
     title: "Content",
     titleHighlight: "Creation",
-    subtitle: "Lorem, ipsum dolor sit amet consectetur ",
-    subtitleHighlight: "adipisicing elit.",
+    subtitle: "Create Impactful Content that Elevates Your Brand and Engages ",
+    subtitleHighlight: "Your Audience.",
     img: "/assets/services/marketing/content-creation.png",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, aliquam? Doloremque officiis inventore vero, voluptatibus consequuntur nulla eos beatae excepturi tempore maiores dolore, saepe est hic sit quaerat soluta tenetur?",
+      "We produce high-quality, compelling content that tells your brand's story and captures your audience's attention. From blogs to videos, our content creation services boost engagement, enhance your message, and support your marketing goals.",
   },
 ];
 const MarketingServices = () => {

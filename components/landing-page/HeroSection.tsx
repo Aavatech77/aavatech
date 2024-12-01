@@ -31,9 +31,9 @@ const HeroSection = () => {
     <HeroContainer>
       <HeroContent>
         <HeroTitle
-          main="Transform Your Business with"
-          secondary="Innovative IT Solutions"
-          subtitle="We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward. We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward."
+          main="Welcome to Aava Technology"
+          secondary="Empowering Digital Transformation"
+          subtitle="At Aava Technology, we are your trusted partner in driving digital innovation and crafting impactful solutions. From creating stunning websites to developing tailored software solutions, we empower businesses to thrive in a digital-first world."
         >
           <div className="flex flex-col sm:flex-row gap-4">
             <BookConsultationModal />

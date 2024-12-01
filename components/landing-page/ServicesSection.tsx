@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import WebsiteDev from "@/public/assets/landing-page/website-dev.png";
-import AppDev from "@/public/assets/landing-page/app-dev.png";
 import SoftwareDev from "@/public/assets/landing-page/software-dev.png";
+import ConsultationServiceImage from "@/public/assets/consultation-page/business-consultant.png";
+import MarketingService from "@/public/assets/landing-page/marketing-service.png";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
@@ -15,46 +15,24 @@ interface IServices {
 
 const services: IServices[] = [
   {
-    title: "Website Development",
+    title: "Development Services",
     description:
-      "A visually stunning and fully functional website design tailored to your needs.",
-    image: WebsiteDev,
-    href: "/services/development",
-  },
-  {
-    title: "App Development",
-    description:
-      "A visually stunning and fully functional app design tailored to your needs.",
-    image: AppDev,
-    href: "/services/development",
-  },
-  {
-    title: "Software Development",
-    description:
-      "A visually stunning and fully functional software design tailored to your needs.",
+      "A Visually Stunning and Fully Functional Software Solutions Tailored to Your Needs.",
     image: SoftwareDev,
     href: "/services/development",
   },
   {
-    title: "Website Development",
+    title: "Consultation Services",
     description:
-      "A visually stunning and fully functional website design tailored to your needs.",
-    image: WebsiteDev,
-    href: "/services/development",
+      "Strategic Insights, Transformative Solutions: Grow Your Business Journey",
+    image: ConsultationServiceImage,
+    href: "/services/consultant",
   },
   {
-    title: "Website Development",
-    description:
-      "A visually stunning and fully functional website design tailored to your needs.",
-    image: WebsiteDev,
-    href: "/services/development",
-  },
-  {
-    title: "Website Development",
-    description:
-      "A visually stunning and fully functional website design tailored to your needs.",
-    image: WebsiteDev,
-    href: "/services/development",
+    title: "Marketing Services",
+    description: "Strategies that Drive Engagement and Growth",
+    image: MarketingService,
+    href: "/services/marketing",
   },
 ];
 
@@ -65,8 +43,8 @@ const ServicesSection = () => {
         <h1 className="font-semibold text-2xl text-center">
           Our <span className="text-highlight">Services</span>
           <br />
-          Outstanding Solutions to Fuel Your{" "}
-          <span className="text-[#4874AE]">Business Growth</span>
+          Fueling Innovation with{" "}
+          <span className="text-[#4874AE]">Tailored Digital Solutions</span>
         </h1>
         <p className="text-center text-sm">
           Explore our diverse digital solutions designed to elevate your online
