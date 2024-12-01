@@ -5,8 +5,8 @@ const Orgs = () => {
   return (
     <LayoutWithImageOnRight
       title="NGO / INGO"
-      subtitle="Lorem ipsum dolor sit amet consectetur."
-      content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veniam nisi modi alias excepturi beatae non repudiandae ea magni qui."
+      subtitle="Driving Social Change through Innovation and Efficiency"
+      content="We assist NGOs/INGOs in streamlining operations and amplifying their impact. By leveraging data analytics, project management tools, and cloud infrastructure, we help drive positive global change."
       img="/assets/industries-page/orgs.png"
     />
   );

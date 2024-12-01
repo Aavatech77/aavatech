@@ -40,9 +40,9 @@ const ConsultHero = () => {
     <HeroContainer>
       <HeroContent>
         <HeroTitle
-          main="Transform Your Business with"
-          secondary="Innovative IT Solutions"
-          subtitle="We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward. We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward."
+          main="Strategic Business Consultation for "
+          secondary="Lasting Success"
+          subtitle="Our strategic consultation services help businesses navigate challenges and drive sustainable growth. We provide expert insights in business development, technology adoption, and operational efficiency to optimize your processes."
         />
 
         <FloatingElements icons={props.icons} labels={props.labels}>

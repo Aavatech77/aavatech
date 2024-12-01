@@ -10,7 +10,7 @@ const MarketingPage = () => {
       <LayoutWithBorderLeft
         title="Marketing Services"
         highlightText="We Offer"
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga totam numquam quo, ipsum minus possimus odio rem eveniet ex expedita deserunt in aut suscipit sapiente. Ipsum corporis officiis sapiente maiores?"
+        content="At Aava Technology, we provide a comprehensive range of marketing services designed to accelerate your brand’s growth and ensure long-term success. Our expert team crafts personalized, results-driven strategies that align with your unique business goals, helping you stand out and thrive in today’s competitive digital world."
       />
       <MarketingServices />
     </>

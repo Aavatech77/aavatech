@@ -8,38 +8,38 @@ const developmentServices: LayoutWithImageProps[] = [
   {
     title: "Web",
     titleHighlight: "Development",
-    subtitle: "Lorem, ipsum dolor sit amet consectetur ",
-    subtitleHighlight: "adipisicing elit.",
+    subtitle: "A Visually Stunning and Fully Functional Website Tailored to ",
+    subtitleHighlight: "Your Needs.",
     img: "/assets/services/development/web.png",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, aliquam? Doloremque officiis inventore vero, voluptatibus consequuntur nulla eos beatae excepturi tempore maiores dolore, saepe est hic sit quaerat soluta tenetur?",
-  },
-  {
-    title: "App",
-    titleHighlight: "Development",
-    subtitle: "Lorem, ipsum dolor sit amet consectetur ",
-    subtitleHighlight: "adipisicing elit.",
-    img: "/assets/services/development/app.png",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, aliquam? Doloremque officiis inventore vero, voluptatibus consequuntur nulla eos beatae excepturi tempore maiores dolore, saepe est hic sit quaerat soluta tenetur?",
+      "In today’s digital world, your website is key to business growth. Our expert web developers create custom, user-friendly, and responsive websites that are visually appealing and align with your goals, offering end-to-end solutions from design to advanced features.",
   },
   {
     title: "Software",
     titleHighlight: "Development",
-    subtitle: "Lorem, ipsum dolor sit amet consectetur ",
-    subtitleHighlight: "adipisicing elit.",
+    subtitle: "Your Vision, Our Code: Building Software for ",
+    subtitleHighlight: "Business Growth.",
     img: "/assets/services/development/software.png",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, aliquam? Doloremque officiis inventore vero, voluptatibus consequuntur nulla eos beatae excepturi tempore maiores dolore, saepe est hic sit quaerat soluta tenetur?",
+      "Our business deserves software solutions that adapt and scale. Our skilled developers turn your vision into powerful applications that enhance efficiency. From custom software to seamless integrations, every solution is tailored to your unique needs. Partner with us to empower your business in the digital landscape",
+  },
+  {
+    title: "App",
+    titleHighlight: "Development",
+    subtitle: "Launch Your Dream App Together with Our ",
+    subtitleHighlight: "Development Experts.",
+    img: "/assets/services/development/app.png",
+    content:
+      "Transform your vision into reality with our expert app development services. We create innovative, user-friendly apps that captivate audiences, leveraging cutting-edge technology to deliver seamless, intuitive experiences that elevate your digital presence.",
   },
   {
     title: "UI/UX",
     titleHighlight: "Design",
-    subtitle: "Lorem, ipsum dolor sit amet consectetur ",
-    subtitleHighlight: "adipisicing elit.",
+    subtitle: "Crafting Immersive, User-Centric ",
+    subtitleHighlight: "Digital Experiences.",
     img: "/assets/services/development/ui.png",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, aliquam? Doloremque officiis inventore vero, voluptatibus consequuntur nulla eos beatae excepturi tempore maiores dolore, saepe est hic sit quaerat soluta tenetur?",
+      "We redefine digital experiences with user-focused UI/UX design. Our intuitive, data-driven interfaces enhance engagement and streamline journeys, ensuring seamless functionality across devices. Tailored to captivate users and drive business impact, we transform your platform for growth.",
   },
 ];
 const DevelopmentServices = () => {

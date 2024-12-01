@@ -35,7 +35,7 @@ const ConsultationServices = () => {
       <LayoutWithBorderLeft
         title="Consultation Services"
         highlightText="We Provide"
-        content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quia, ipsa dignissimos, eius nihil rerum debitis nisi iusto voluptas odio neque ipsum reiciendis atque laboriosam eos adipisci cumque corporis impedit lorem ihsd jh!"
+        content="Our consultation services provide expert guidance to help you overcome challenges and achieve sustainable growth. We work closely with you to develop tailored strategies that align with your business goals. From operational efficiency to technology adoption, we empower you to drive success."
       />
       <div className="bg-[#4874AE1A]/10 py-8">
         <Tabs options={tabs} setActiveTab={setActiveTab} />

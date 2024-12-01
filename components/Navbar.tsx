@@ -41,19 +41,19 @@ const SERVICES = [
     href: "/services/development",
     label: "Development",
     icon: <Code2 className="h-6 w-6" />,
-    desc: "KKj Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    desc: "Explore our Development Services.",
   },
   {
     href: "/services/marketing",
     label: "Marketing",
     icon: <Monitor className="h-6 w-6" />,
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    desc: "Explore our Marketing Services.",
   },
   {
     href: "/services/consultant",
     label: "Consultation",
     icon: <PenTool className="h-6 w-6" />,
-    desc: "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+    desc: "Explore our Consultation Services.",
   },
 ];
 

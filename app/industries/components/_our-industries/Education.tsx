@@ -5,9 +5,10 @@ const Education = () => {
   return (
     <LayoutWithImageOnRight
       title="Education"
-      subtitle="Lorem ipsum dolor sit amet consectetur."
-      content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veniam nisi modi alias excepturi beatae non repudiandae ea magni qui."
+      subtitle="Bringing Education to Life with Digital Innovation"
+      content="We empower educational institutions with innovative tools to enhance learning experiences. From virtual classrooms to AI-driven learning platforms, we make education more accessible and engaging."
       img="/assets/industries-page/education.png"
+      roundedCorner
     />
   );
 };

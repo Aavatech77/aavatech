@@ -16,7 +16,7 @@ const LayoutWithImageOnLeft = ({
       <AnimateInView
         type="slide-in"
         direction="left"
-        className="max-h-[300px] relative overflow-clip w-full"
+        className="max-h-[300px] md:min-w-[400px] relative overflow-clip w-full"
       >
         <Image
           src={img}

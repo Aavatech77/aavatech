@@ -12,8 +12,8 @@ export const consultationValidationSchema = z.object({
     .string()
     .min(1, "Description is required")
     .max(1000, "Description is too long"),
-  date: z.string().date(),
-  category: z.enum(["Tech", "Legal", "Business", "Finance"]),
+  // date: z.string().date("Enter valid date"),
+  // category: z.enum(["Tech", "Legal", "Business", "Finance"]),
 });
 
 export const quoteRequestValidationSchema = z.object({
@@ -28,6 +28,10 @@ export const quoteRequestValidationSchema = z.object({
     .string()
     .min(1, "Description is required")
     .max(1000, "Description is too long"),
-  timeline: z.coerce.number().nonnegative("Timeline must be greater than 0"),
-  budget: z.coerce.number().nonnegative("Budget must be greater than 0"),
+  timeline: z.coerce
+    .number({ invalid_type_error: "Enter valid number" })
+    .nonnegative("Timeline must be greater than 0"),
+  budget: z.coerce
+    .number({ invalid_type_error: "Enter valid number" })
+    .nonnegative("Budget must be greater than 0"),
 });

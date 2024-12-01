@@ -33,9 +33,9 @@ const MarketingHero = () => {
     <HeroContainer>
       <HeroContent>
         <HeroTitle
-          main="Join Our Team and"
-          secondary="Grow with Us"
-          subtitle="We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward. We deliver cutting-edge software development, cloud solutions, and IT consulting to drive your business forward."
+          main="Transform Your Brand with "
+          secondary="Expert Marketing Strategies"
+          subtitle="Harness the power of tailored marketing solutions from Aava Technology. Our team specializes in creating impactful digital campaigns that drive engagement, increase visibility, and deliver measurable results. From SEO and content marketing to targeted ads, we help you connect with your ideal audience and accelerate growth."
         />
         <FloatingElements icons={props.icons} labels={props.labels}>
           <ConnectingLines />

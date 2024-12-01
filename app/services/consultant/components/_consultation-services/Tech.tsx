@@ -5,9 +5,9 @@ const Tech = () => {
   return (
     <LayoutWithImageOnRight
       title="Tech Consultant"
-      subtitle="Lorem ipsum dolor sit amet consectetur."
-      content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veniam nisi modi alias excepturi beatae non repudiandae ea magni qui."
-      img="/assets/consultation-page/consultant.png"
+      subtitle="Launch Your Dream App Together with Our Development Experts"
+      content="Ignite your vision with our premier app development expertise. We transform ideas into groundbreaking applications that captivate and engage users. Harness cutting-edge technology to create seamless, intuitive experiences. Let's revolutionize your digital landscape and bring your dream app to life!"
+      img="/assets/consultation-page/tech-consultant.png"
     />
   );
 };

@@ -1,6 +1,7 @@
 import React from "react";
 import AnimateInView from "@/components/animate/AnimateInView";
 import Image, { StaticImageData } from "next/image";
+import { cn } from "@/lib/utils";
 
 export type LayoutWithImageProps = {
   title: string;
@@ -9,6 +10,7 @@ export type LayoutWithImageProps = {
   img: string | StaticImageData;
   titleHighlight?: string;
   subtitleHighlight?: string;
+  roundedCorner?: boolean;
 };
 
 const LayoutWithImageOnRight = ({
@@ -18,6 +20,7 @@ const LayoutWithImageOnRight = ({
   img,
   titleHighlight,
   subtitleHighlight,
+  roundedCorner,
 }: LayoutWithImageProps) => {
   return (
     <div className="flex flex-col md:flex-row gap-6 items-center">
@@ -35,14 +38,17 @@ const LayoutWithImageOnRight = ({
       </AnimateInView>
       <AnimateInView
         type="slide-in"
-        className="max-h-[300px] w-full relative overflow-clip"
+        className="max-h-[300px] md:min-w-[400px] w-full relative"
       >
         <Image
           src={img}
           width={800}
           height={800}
           alt=""
-          className="size-full object-contain"
+          className={cn(
+            "h-full object-contain",
+            roundedCorner && "rounded-xl overflow-hidden"
+          )}
         />
       </AnimateInView>
     </div>

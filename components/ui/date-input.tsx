@@ -1,11 +1,13 @@
 "use client";
 
 import { Calendar } from "lucide-react";
-import { ChangeEvent, useRef, useState } from "react";
+import { ChangeEvent, useRef } from "react";
 import { useFormStatus } from "react-dom";
 
 interface DateInputProps {
   name: string;
+  date: string;
+  onChange: (value: string) => void;
   required?: boolean;
   defaultValue?: string;
   className?: string;
@@ -13,12 +15,13 @@ interface DateInputProps {
 
 export default function DateInput({
   name,
+  date,
+  onChange,
   required = false,
   defaultValue = "",
   className = "",
 }: DateInputProps) {
   const { pending } = useFormStatus();
-  const [displayValue, setDisplayValue] = useState(defaultValue);
   const dateInputRef = useRef<HTMLInputElement>(null);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -28,7 +31,7 @@ export default function DateInput({
       day: "2-digit",
       year: "numeric",
     });
-    setDisplayValue(formattedDate);
+    onChange(formattedDate);
   };
 
   return (
@@ -52,6 +55,8 @@ export default function DateInput({
           [&::-webkit-calendar-picker-indicator]:right-2
           [&::-webkit-calendar-picker-indicator]:p-2
         `}
+        aria-hidden
+        tabIndex={-1}
       />
 
       <button
@@ -59,11 +64,11 @@ export default function DateInput({
           e.preventDefault();
           dateInputRef.current?.showPicker();
         }}
-        className="absolute inset-0 rounded-md border border-gray-200 px-3 py-2 focus:border-gray-500"
+        className="absolute inset-0 rounded-md border border-gray-200 px-3 py-2 focus:border-gray-500 focus-visible:outline-none focus-visible:border-gray-500"
       >
         <div className="flex justify-between items-center text-gray-700">
           <p className="flex-1 text-sm text-left">
-            {displayValue ? displayValue : "Select Date"}
+            {date ? date : "Select Date"}
           </p>
           <Calendar className="size-5 text-inherit" />
         </div>
