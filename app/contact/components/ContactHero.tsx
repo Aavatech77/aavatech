@@ -28,9 +28,9 @@ const ContactHero = () => {
     <HeroContainer>
       <HeroContent>
         <HeroTitle
-          main="Connecting Technology with"
-          secondary="Possibility"
-          subtitle=""
+          main="Get In Touch "
+          secondary="With Us"
+          subtitle="Have questions or ready to start your next project? Our team is here to help. Reach out to us for expert solutions, consultations, or more information. We’d love to connect and explore how we can support your goals."
         />
         <FloatingElements icons={props.icons} labels={props.labels}>
           <ConnectingLines />
