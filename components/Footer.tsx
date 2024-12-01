@@ -17,9 +17,10 @@ const Footer = () => {
             />
           </div>
           <p className="info__text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Necessitatibus, doloribus? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Rerum, laborum!
+            At Aava Technology, we deliver tailored IT solutions that optimize
+            operations, enhance customer experiences, and drive digital
+            transformation, helping your business stay ahead of trends and
+            thrive in a rapidly evolving tech landscape.
           </p>
           <p className="info__mail">info@aavatechnepal.com</p>
         </div>
@@ -35,8 +36,8 @@ const Footer = () => {
         <div className="footer__contact">
           <p className="footer__title">Contact Us</p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-            deleniti officia vel in cupiditate consequuntur. lorem10
+            Have questions or ready to start your next project? Our team is here
+            to help.
           </p>
           <p>+977 9876543210</p>
         </div>
