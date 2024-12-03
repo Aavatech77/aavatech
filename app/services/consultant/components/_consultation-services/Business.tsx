@@ -5,8 +5,8 @@ const Business = () => {
   return (
     <LayoutWithImageOnRight
       title="Business Consultant"
-      subtitle="Lorem ipsum dolor sit amet consectetur."
-      content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veniam nisi modi alias excepturi beatae non repudiandae ea magni qui."
+      subtitle="Strategic Insights, Transformative Solutions"
+      content="Boost your business with our strategic consulting services. We deliver customized solutions to improve efficiency, drive growth, and achieve your goals."
       img="/assets/consultation-page/business-consultant.png"
     />
   );

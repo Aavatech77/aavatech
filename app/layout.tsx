@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SubscribeToNewsLetter from "@/components/SubscribeToNewsletter";
 import { Toaster } from "@/components/ui/toaster";
+import Script from "next/script";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -29,6 +30,11 @@ export default function RootLayout({
         <SubscribeToNewsLetter />
         <Footer />
         <Toaster />
+        <Script
+          async
+          type="text/javascript"
+          src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=WKPuQA"
+        />
       </body>
     </html>
   );

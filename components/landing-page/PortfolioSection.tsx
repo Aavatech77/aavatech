@@ -12,18 +12,38 @@ const PortfolioSection = () => {
         <div className="grid md:grid-cols-2 gap-8 my-8">
           <AnimateInView type="slide-in" delay={0.2}>
             <CardHorizontal
-              title="Lorem Ipsum"
-              description="Stay upto date with the latestStartup Insights with.Stay upto date with the latestStartup Insights with"
-              href="#"
-              img="/assets/landing-page/library-architecture.png"
+              title="Astitwa Foundation"
+              description="Astitwa foundation works to bring joy and happiness to paediatric cancer patient and their families while providing recreational services and financial support."
+              href="https://astitwafoundation.org"
+              img="/assets/landing-page/smile.jpg"
+              newTab
             />
           </AnimateInView>
           <AnimateInView type="slide-in">
             <CardHorizontal
-              title="Lorem Ipsum"
-              description="Stay upto date with the latestStartup Insights with.Stay upto date with the latestStartup Insights with"
-              href="#"
-              img="/assets/landing-page/library-architecture.png"
+              title="eDAILO"
+              description="eDAILO is your one-stop shop for all your needs! From everyday essentials to unique finds, we offer an extensive range of products designed to make your life easier and more enjoyable. "
+              href="https://edailo.com/"
+              img="/assets/landing-page/edialo.jpeg"
+              newTab
+            />
+          </AnimateInView>
+          <AnimateInView type="slide-in">
+            <CardHorizontal
+              title="INVESTIAA"
+              description="INVESTIAA is your one-stop shop for all your needs! From everyday essentials to unique finds, we offer an extensive range of products designed to make your life easier and more enjoyable. "
+              href="https://INVESTIAA.com/"
+              img="/assets/landing-page/investiaa2.png"
+              newTab
+            />
+          </AnimateInView>
+          <AnimateInView type="slide-in">
+            <CardHorizontal
+              title="Kalpabrikshya"
+              description="Kalpabrikshya offers insights and tools on everything from budgeting and saving to investing and retirement planning, empowering you to make informed decisions and achieve your goals with confidence."
+              href="https://kalpabrikshya.com/"
+              img="/assets/landing-page/kalpa.jpg"
+              newTab
             />
           </AnimateInView>
         </div>
