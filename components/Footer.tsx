@@ -39,7 +39,7 @@ const Footer = () => {
             Have questions or ready to start your next project? Our team is here
             to help.
           </p>
-          <p>+977 9876543210</p>
+          <p>+977 9761745192</p>
         </div>
         <div className="footer__socials">
           <p className="footer__title">Our Socials</p>

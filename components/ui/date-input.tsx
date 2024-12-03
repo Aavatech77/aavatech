@@ -47,7 +47,7 @@ export default function DateInput({
         ref={dateInputRef}
         className={`
           opacity-0 block w-full rounded-md 
-          px-4 py-2
+          px-4 h-9
           ${className}
           [&::-webkit-calendar-picker-indicator]:bg-transparent
           [&::-webkit-calendar-picker-indicator]:hover:cursor-pointer

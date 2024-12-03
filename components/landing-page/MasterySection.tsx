@@ -74,13 +74,19 @@ const MasterySection: React.FC = () => {
             <InfiniteCarousel items={mastery} />
           </div>
         </div>
-        <AnimateInView type="slide-in" className="mx-auto">
-          <Image
-            src="/assets/svgs/mastery.svg"
-            alt="Mastery Illustration"
-            width={800}
-            height={800}
-          />
+        <AnimateInView
+          type="slide-in"
+          className="mx-auto max-h-[300px] overflow-hidden"
+        >
+          <div className="relative">
+            <Image
+              src="/assets/svgs/mastery.svg"
+              alt="Mastery Illustration"
+              width={400}
+              height={400}
+              className="object-contain"
+            />
+          </div>
         </AnimateInView>
       </div>
     </section>
