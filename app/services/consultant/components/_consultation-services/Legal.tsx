@@ -5,8 +5,8 @@ const Legal = () => {
   return (
     <LayoutWithImageOnRight
       title="Legal Consultant"
-      subtitle="Lorem ipsum dolor sit amet consectetur."
-      content="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo veniam nisi modi alias excepturi beatae non repudiandae ea magni qui."
+      subtitle="Navigating Compliance with Confidence"
+      content="Our legal consultants provide expert guidance on regulatory requirements and risk management, helping you navigate complexities and safeguard your business."
       img="/assets/consultation-page/legal-consultant.png"
     />
   );
