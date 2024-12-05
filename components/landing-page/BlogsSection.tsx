@@ -26,6 +26,7 @@ const BlogsSection = () => {
                 description="Stay upto date with the latestStartup Insights with.Stay upto date with the latestStartup Insights with"
                 href="#"
                 img="/assets/landing-page/library-architecture.png"
+                fit="cover"
               />
             </AnimateInView>
             <AnimateInView type="fade-in">
@@ -68,6 +69,7 @@ const BlogsSection = () => {
                 description="Stay upto date with the latestStartup Insights with.Stay upto date with the latestStartup Insights with"
                 href="#"
                 img="/assets/landing-page/library-architecture.png"
+                fit="cover"
               />
             </AnimateInView>
           </div>

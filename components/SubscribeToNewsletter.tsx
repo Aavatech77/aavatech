@@ -1,6 +1,5 @@
 import React from "react";
-import { Input } from "./ui/input";
-import { Button } from "./ui/button";
+import SubscribeButton from "./SubscribeButton";
 
 const SubscribeToNewsLetter = () => {
   return (
@@ -21,16 +20,7 @@ const SubscribeToNewsLetter = () => {
           <p className="text-sm">
             Subscribe to access our exclusive offers before anyone else
           </p>
-          <form className="space-y-4">
-            <Input
-              type="email"
-              placeholder="Enter your Email"
-              className="bg-white"
-            />
-            <Button type="submit" className="rounded-full">
-              Subscribe
-            </Button>
-          </form>
+          <SubscribeButton />
         </div>
       </div>
       <div className="absolute inset-0 bg-slate-300/70"></div>

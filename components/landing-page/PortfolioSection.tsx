@@ -15,7 +15,7 @@ const PortfolioSection = () => {
               title="Astitwa Foundation"
               description="Astitwa foundation works to bring joy and happiness to paediatric cancer patient and their families while providing recreational services and financial support."
               href="https://astitwafoundation.org"
-              img="/assets/landing-page/smile.jpg"
+              img="/assets/landing-page/astitwa.png"
               newTab
             />
           </AnimateInView>
@@ -42,7 +42,7 @@ const PortfolioSection = () => {
               title="Kalpabrikshya"
               description="Kalpabrikshya offers insights and tools on everything from budgeting and saving to investing and retirement planning, empowering you to make informed decisions and achieve your goals with confidence."
               href="https://kalpabrikshya.com/"
-              img="/assets/landing-page/kalpa.jpg"
+              img="/assets/landing-page/kalpa.webp"
               newTab
             />
           </AnimateInView>

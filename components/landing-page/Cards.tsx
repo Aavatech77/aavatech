@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { StaticImageData } from "next/image";
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 type CardProps = {
   title: string;
@@ -9,6 +10,7 @@ type CardProps = {
   href: string;
   img: string | StaticImageData;
   newTab?: boolean;
+  fit?: "contain" | "cover";
 };
 
 const CardHorizontal = ({
@@ -17,6 +19,7 @@ const CardHorizontal = ({
   href,
   img,
   newTab,
+  fit,
 }: CardProps) => {
   return (
     <div className="rounded-3xl shadow-lg grid sm:grid-cols-[2fr_1fr] overflow-hidden bg-white h-full">
@@ -36,7 +39,10 @@ const CardHorizontal = ({
           src={img}
           width={400}
           height={400}
-          className="object-cover min-w-full sm:aspect-square sm:rounded-full sm:hover:rounded-none hover:scale-[1.75] transition-all duration-700"
+          className={cn(
+            "min-w-full sm:aspect-square",
+            fit === "cover" ? "object-cover" : "object-contain"
+          )}
           alt=""
         />
       </div>
@@ -44,7 +50,7 @@ const CardHorizontal = ({
   );
 };
 
-const CardVertical = ({ title, description, href, img }: CardProps) => {
+const CardVertical = ({ title, description, href, img, newTab }: CardProps) => {
   return (
     <div className="rounded-3xl shadow-lg grid overflow-hidden bg-white h-full">
       <div className="relative overflow-hidden flex justify-center items-center">
@@ -59,7 +65,11 @@ const CardVertical = ({ title, description, href, img }: CardProps) => {
       <div className="pl-4 py-6 space-y-4">
         <h2 className="font-semibold text-xl uppercase">{title}</h2>
         <p>{description}</p>
-        <Link href={href} className="text-primary flex gap-2">
+        <Link
+          href={href}
+          target={newTab ? "_blank" : "_self"}
+          className="text-primary flex gap-2"
+        >
           More Details <ArrowRight />
         </Link>
       </div>
