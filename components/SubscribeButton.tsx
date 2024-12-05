@@ -25,6 +25,7 @@ const SubscribeButton = () => {
           variant: "destructive",
         });
     } catch (error) {
+      console.error(error);
       toast({
         title: "Error",
         description: "An unexpected error occurred.",
