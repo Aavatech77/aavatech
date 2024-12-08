@@ -4,7 +4,7 @@ import Target from "@/public/assets/about-page/target.png";
 import AnimateInView from "@/components/animate/AnimateInView";
 export default function Objective() {
   return (
-    <div className="container mx-auto px-4 py-12 grid md:grid-cols-2 gap-8">
+    <section className="container px-4 py-12 grid md:grid-cols-2 gap-8">
       <AnimateInView type="fade-in">
         <div className="space-y-4">
           <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center">
@@ -56,6 +56,6 @@ export default function Objective() {
           </div>
         </div>
       </AnimateInView>
-    </div>
+    </section>
   );
 }

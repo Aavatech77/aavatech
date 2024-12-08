@@ -30,7 +30,7 @@ const BlogsSection = () => {
               />
             </AnimateInView>
             <AnimateInView type="fade-in">
-              <div className="grid grid-cols-2 gap-4 lg:gap-8">
+              <div className="grid sm:grid-cols-2 gap-4 lg:gap-8">
                 <CardVertical
                   title="Lorem Ipsum"
                   description="Stay upto date with the latestStartup Insights with.Stay upto date with the latestStartup Insights with"
@@ -48,7 +48,7 @@ const BlogsSection = () => {
           </div>
           <div className="space-y-8">
             <AnimateInView type="fade-in" direction="left">
-              <div className="grid grid-cols-2 gap-4 lg:gap-8">
+              <div className="grid sm:grid-cols-2 gap-4 lg:gap-8">
                 <CardVertical
                   title="Lorem Ipsum"
                   description="Stay upto date with the latestStartup Insights with.Stay upto date with the latestStartup Insights with"

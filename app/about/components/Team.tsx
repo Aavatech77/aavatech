@@ -18,21 +18,6 @@ const teams = [
     name: "Susan Chapagai",
     post: "CEO",
   },
-  {
-    pic: "https://blog.investiaa.com/team_photos/team4.png",
-    name: "Assoc.Prof. Pramod Poudel",
-    post: "Academic Advisor",
-  },
-  {
-    pic: "https://blog.investiaa.com/team_photos/team5.png",
-    name: "Biplab Karki",
-    post: "International Relation Advisor",
-  },
-  {
-    pic: "https://blog.investiaa.com/team_photos/team6.png",
-    name: "Advocate Radha Krishna Pathak",
-    post: "Legal Advisor",
-  },
 ];
 
 const TeamsCard = () => {
@@ -59,12 +44,12 @@ const TeamsCard = () => {
 };
 function Team() {
   return (
-    <div className="container mt-8 mb-8">
+    <section className="container mt-8 mb-8">
       <AnimateInView type="scale">
         <h1 className="text-3xl mb-8 font-bold">Our Team</h1>
         <TeamsCard />
       </AnimateInView>
-    </div>
+    </section>
   );
 }
 

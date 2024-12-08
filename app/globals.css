@@ -161,3 +161,7 @@ footer {
     }
   }
 }
+
+section {
+  overflow-x: clip;
+}

@@ -24,10 +24,7 @@ const LandingPageAbout = () => {
           <Link href="/about">About Us</Link>
         </Button>
       </AnimateInView>
-      <AnimateInView
-        type="slide-in"
-        className="relative min-h-[300px] w-full mx-auto"
-      >
+      <AnimateInView type="slide-in" className="min-h-[300px] w-full mx-auto">
         <Image
           src={PersonImage}
           alt="A person using Laptop"

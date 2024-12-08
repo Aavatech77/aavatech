@@ -34,7 +34,7 @@ const CardHorizontal = ({
           More Details <ArrowRight />
         </Link>
       </div>
-      <div className="relative size-full overflow-hidden grid items-center">
+      <div className="relative size-full overflow-hidden grid items-center min-h-36">
         <Image
           src={img}
           fill

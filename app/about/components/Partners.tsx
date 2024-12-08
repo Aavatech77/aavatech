@@ -40,7 +40,9 @@ function Partners() {
           ))}
         </div>
       </AnimateInView> */}
-      <InfiniteCarousel items={partners} />
+      <div className="container">
+        <InfiniteCarousel items={partners} />
+      </div>
     </div>
   );
 }
