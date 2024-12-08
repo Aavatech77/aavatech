@@ -31,7 +31,7 @@ const Footer = () => {
             <Link href="/about">Our Company</Link>
             <Link href="/industries">Our Industries</Link>
             <Link href="/careers">Careers</Link>
-            <Link href="/blogs">Blogs</Link>
+            <Link href="https://blog.investiaa.com/">Blogs</Link>
           </div>
         </div>
         <div className="footer__contact">
@@ -48,28 +48,32 @@ const Footer = () => {
             <Link
               href="https://www.facebook.com/aavatech"
               className="social-icon"
+              target="__blank"
             >
               <Facebook className="stroke-0 fill-blue-600" />
             </Link>
             <Link
               href="https://www.instagram.com/aavatechnology/"
               className="social-icon"
+              target="__blank"
             >
               <Instagram className="stroke-orange-600" />
             </Link>
             <Link
               href="https://www.instagram.com/aavatechnology/"
               className="social-icon"
+              target="__blank"
             >
               <Twitter className="stroke-0 fill-blue-600" />
             </Link>
             <Link
               href="https://www.linkedin.com/company/101443854/aavatechnology"
               className="social-icon"
+              target="__blank"
             >
               <Linkedin className="stroke-0 fill-blue-600" />
             </Link>
-            <Link href="/" className="social-icon">
+            <Link href="/" className="social-icon" target="__blank">
               <FaTiktok className="fill-black" />
             </Link>
           </div>
