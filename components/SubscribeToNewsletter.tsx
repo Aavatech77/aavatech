@@ -1,5 +1,5 @@
 import React from "react";
-import SubscribeButton from "./SubscribeButton";
+import SubscribeForm from "./SubscribeForm";
 
 const SubscribeToNewsLetter = () => {
   return (
@@ -20,7 +20,7 @@ const SubscribeToNewsLetter = () => {
           <p className="text-sm">
             Subscribe to access our exclusive offers before anyone else
           </p>
-          <SubscribeButton />
+          <SubscribeForm />
         </div>
       </div>
       <div className="absolute inset-0 bg-slate-300/70"></div>

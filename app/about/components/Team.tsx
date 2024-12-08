@@ -50,7 +50,7 @@ const TeamsCard = () => {
             height={100}
             className="size-20 rounded-full overflow-hidden object-cover bg-white"
           />
-          <h2 className="font-medium mt-2 text-lg">{team.name}</h2>
+          <h2 className="font-medium mt-2 text-lg text-center">{team.name}</h2>
           <p>{team.post}</p>
         </div>
       ))}

@@ -1,11 +1,12 @@
 "use client";
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { FormEvent, useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { subscribe } from "@/actions/actions";
 
-const SubscribeButton = () => {
+const SubscribeForm = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -17,7 +18,10 @@ const SubscribeButton = () => {
       const result = await subscribe(email);
       if (result.success) {
         setEmail("");
-        toast({ title: "You are now subscribed to our newsletter" });
+        toast({
+          title: "Confirm your email",
+          description: `We have sent you confirmation email at ${email}`,
+        });
       } else
         toast({
           title: "Subscription Failed",
@@ -52,4 +56,4 @@ const SubscribeButton = () => {
   );
 };
 
-export default SubscribeButton;
+export default SubscribeForm;
