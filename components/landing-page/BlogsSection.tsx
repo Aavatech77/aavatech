@@ -31,7 +31,7 @@ const BlogsSection = () => {
         "https://blog.investiaa.com/wp-json/wp/v2/posts",
         {
           params: {
-            per_page: 3,
+            per_page: 4,
             _embed: true, // This helps retrieve featured media
           },
         }
@@ -73,27 +73,27 @@ const BlogsSection = () => {
           At our IT company, we empower businesses with innovative, scalable
           solutions that drive success and efficiency.
         </p>
-        <div className="space-y-4 mt-6">
-          <Suspense fallback={<div>Loading ...</div>}>
-            {blogs.slice(0, 3).map((blog) => (
-              <AnimateInView type="slide-in" key={blog.id}>
-                <CardHorizontal
-                  title={blog.title.rendered}
-                  description={blog.excerpt.rendered
-                    .replace("[&hellip;]", "")
-                    .trimEnd()}
-                  setAsHTML
-                  fit="cover"
-                  href={blog.link}
-                  newTab
-                  img={
-                    blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-                    "/assets/landing-page/library-architecture.png"
-                  }
-                />
-              </AnimateInView>
-            ))}
-          </Suspense>
+        <div className="grid grid-cols-2 gap-6 mt-6">
+          {blogs.slice(0, 4).map((blog) => (
+            <AnimateInView type="slide-in" key={blog.id}>
+              <CardHorizontal
+                title={blog.title.rendered.split(":")[0]}
+                description={blog.excerpt.rendered
+                  .replace("[&hellip;]", "")
+                  .slice(0, 200)
+                  .trimEnd()
+                  .concat("...")}
+                setAsHTML
+                fit="cover"
+                href={blog.link}
+                newTab
+                img={
+                  blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+                  "/assets/landing-page/library-architecture.png"
+                }
+              />
+            </AnimateInView>
+          ))}
         </div>
         <div className="flex justify-center mt-6">
           <Button className="rounded-full" size="lg" asChild>

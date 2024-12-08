@@ -26,7 +26,7 @@ const CardHorizontal = ({
   return (
     <div className="rounded-3xl shadow-lg grid sm:grid-cols-[2fr_1fr] overflow-hidden bg-white h-full">
       <div className="pl-4 py-6 space-y-4 grid">
-        <h2 className="font-semibold text-xl uppercase">{title}</h2>
+        <h2 className="font-semibold text-lg uppercase">{title}</h2>
         {setAsHTML ? (
           <div
             className="pr-4"
@@ -43,13 +43,13 @@ const CardHorizontal = ({
           More Details <ArrowRight />
         </Link>
       </div>
-      <div className="relative size-full overflow-hidden grid items-center sm:aspect-square">
+      <div className="relative size-full overflow-hidden grid items-center">
         <Image
           src={img}
           width={600}
           height={600}
           className={cn(
-            "min-w-full",
+            "min-w-full max-h-[300px]",
             fit === "cover" ? "object-cover" : "object-contain"
           )}
           alt=""
