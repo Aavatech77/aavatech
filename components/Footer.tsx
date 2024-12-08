@@ -3,6 +3,7 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/aavatech_logo.png";
+import { FaTiktok } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -67,6 +68,9 @@ const Footer = () => {
               className="social-icon"
             >
               <Linkedin className="stroke-0 fill-blue-600" />
+            </Link>
+            <Link href="/" className="social-icon">
+              <FaTiktok className="fill-black" />
             </Link>
           </div>
         </div>

@@ -19,7 +19,14 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
   items,
   speed,
 }) => {
-  const displayItems: CarouselItem[] = [...items, ...items, ...items];
+  const displayItems: CarouselItem[] = [
+    ...items,
+    ...items,
+    ...items,
+    ...items,
+    ...items,
+    ...items,
+  ];
   const baseSpeed = 20;
   const duration = baseSpeed / (speed || 1);
   return (
