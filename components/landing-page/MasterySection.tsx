@@ -53,9 +53,9 @@ const mastery: CarouselItem[] = [
 
 const MasterySection: React.FC = () => {
   return (
-    <section className="bg-[#4874AE1A]/10 py-6 md:py-12">
+    <section className="bg-[#4874AE1A]/10 py-6 md:py-12 px-2">
       <div className="container grid md:grid-cols-2 my-6 gap-8">
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 overflow-auto">
           <AnimateInView type="fade-in">
             <h1 className="text-2xl font-semibold mb-2">
               Our <span className="text-highlight">Mastery</span>

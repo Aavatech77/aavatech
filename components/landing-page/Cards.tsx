@@ -37,10 +37,10 @@ const CardHorizontal = ({
       <div className="relative size-full overflow-hidden grid items-center">
         <Image
           src={img}
-          width={400}
-          height={400}
+          fill
+          sizes="1024px"
           className={cn(
-            "min-w-full sm:aspect-square",
+            "min-w-full",
             fit === "cover" ? "object-cover" : "object-contain"
           )}
           alt=""
@@ -56,8 +56,8 @@ const CardVertical = ({ title, description, href, img, newTab }: CardProps) => {
       <div className="relative overflow-hidden flex justify-center items-center">
         <Image
           src={img}
-          width={400}
-          height={400}
+          width={600}
+          height={600}
           className="object-cover size-full hover:scale-[1.75] transition-transform duration-700"
           alt=""
         />

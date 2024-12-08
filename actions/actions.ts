@@ -97,6 +97,7 @@ export const subscribe = async (email: string) => {
       data: response.data,
     };
   } catch (error: any) {
+    // console.log(error);
     return {
       success: false,
       errors: error.response?.data?.errors || [
