@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { CardHorizontal } from "./Cards";
@@ -73,7 +73,7 @@ const BlogsSection = () => {
           At our IT company, we empower businesses with innovative, scalable
           solutions that drive success and efficiency.
         </p>
-        <div className="grid grid-cols-2 gap-6 mt-6">
+        <div className="grid sm:grid-cols-2 gap-6 mt-6">
           {blogs.slice(0, 4).map((blog) => (
             <AnimateInView type="slide-in" key={blog.id}>
               <CardHorizontal

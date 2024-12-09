@@ -73,7 +73,11 @@ const Footer = () => {
             >
               <Linkedin className="stroke-0 fill-blue-600" />
             </Link>
-            <Link href="/" className="social-icon" target="__blank">
+            <Link
+              href="https://www.tiktok.com/@investiaa?_t=8s42RtxVy24&_r=1"
+              className="social-icon"
+              target="__blank"
+            >
               <FaTiktok className="fill-black" />
             </Link>
           </div>
