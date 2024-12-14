@@ -9,7 +9,10 @@ interface DateInputProps
 }
 
 const DateInput = forwardRef<HTMLInputElement, DateInputProps>(
-  ({ onChange, ...props }, ref) => {
+  (
+    { onChange, ...props },
+    ref // eslint-disable-line @typescript-eslint/no-unused-vars
+  ) => {
     const dateInputRef = useRef<HTMLInputElement>(null);
     const [displayDate, setDisplayDate] = useState<string>(
       props.value as string
