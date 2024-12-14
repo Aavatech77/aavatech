@@ -12,9 +12,11 @@ export const consultationValidationSchema = z.object({
     .string()
     .min(1, "Description is required")
     .max(1000, "Description is too long"),
-  // date: z.string().date("Enter valid date"),
-  // category: z.enum(["Tech", "Legal", "Business", "Finance"]),
+  date: z.string().date("Invalid valid date"),
+  category: z.enum(["Tech", "Legal", "Business", "Finance"]),
 });
+
+export type BookingRequest = z.infer<typeof consultationValidationSchema>;
 
 export const quoteRequestValidationSchema = z.object({
   name: z.string().min(1, "Name is required").max(100, "Name is too long"),
@@ -35,3 +37,5 @@ export const quoteRequestValidationSchema = z.object({
     .number({ invalid_type_error: "Enter valid number" })
     .nonnegative("Budget must be greater than 0"),
 });
+
+export type QuoteRequest = z.infer<typeof quoteRequestValidationSchema>;

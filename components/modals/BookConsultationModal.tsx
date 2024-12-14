@@ -23,40 +23,39 @@ import { bookConsultant } from "@/actions/actions";
 import ErrorMessage from "../ErrorMessage";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { consultationValidationSchema } from "@/constants/validation-schemas/validation";
+import {
+  BookingRequest,
+  consultationValidationSchema,
+} from "@/constants/validation-schemas/validation";
 import { useToast } from "@/hooks/use-toast";
 
-type FormInputs = {
-  name: string;
-  email: string;
-  contactNo: string;
-  description: string;
-  // date: string;
-  // category: string;
-};
-
 const BookConsultationModal = () => {
-  const [category, setCategory] = useState("");
-  const [date, setDate] = useState("");
   const [dialogOpen, setDialogOpen] = useState(false);
   const { toast } = useToast();
   const {
     register,
     handleSubmit,
+    setValue,
     reset,
     formState: { errors, isSubmitting },
-  } = useForm<FormInputs>({
+  } = useForm<BookingRequest>({
     mode: "onChange",
     resolver: zodResolver(consultationValidationSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      contactNo: undefined,
+      description: "",
+      date: "",
+      category: "Tech",
+    },
   });
 
-  const onSubmit = async (data: FormInputs) => {
+  const onSubmit = async (data: BookingRequest) => {
     const formData = new FormData();
     Object.entries(data).forEach(([key, value]) => {
       formData.append(key, value);
     });
-    formData.append("date", date);
-    formData.append("category", category);
     const response = await bookConsultant(formData);
     if (response.success) {
       setDialogOpen(false);
@@ -64,19 +63,14 @@ const BookConsultationModal = () => {
         title: "Your request has been submitted successfully.",
       });
       reset();
-      setDate("");
-      setCategory("");
     } else {
       toast({
         variant: "destructive",
         title: "Failed to submit your request",
+        description: response.error,
       });
     }
     return response.success;
-  };
-
-  const handleDateChange = (value: string) => {
-    setDate(value);
   };
 
   return (
@@ -120,15 +114,15 @@ const BookConsultationModal = () => {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <DateInput
-              name="date"
-              date={date}
-              onChange={handleDateChange}
+              {...register("date")}
+              onChange={(value) => setValue("date", value)}
               required
             />
             <Select
               name="category"
-              onValueChange={(value) => setCategory(value)}
-              defaultValue="Tech"
+              onValueChange={(
+                value: "Tech" | "Legal" | "Business" | "Finance"
+              ) => setValue("category", value)}
               required
             >
               <SelectTrigger>
@@ -146,10 +140,10 @@ const BookConsultationModal = () => {
               </SelectContent>
             </Select>
           </div>
-          {/* <div className="space-y-1">
+          <div className="space-y-1">
             <ErrorMessage msg={errors.date?.message} />
             <ErrorMessage msg={errors.category?.message} />
-          </div> */}
+          </div>
 
           <div className="flex gap-4 justify-end">
             <Button

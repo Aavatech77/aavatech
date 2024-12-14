@@ -1,38 +1,42 @@
 "use server";
-
 import {
   consultationValidationSchema,
   quoteRequestValidationSchema,
 } from "@/constants/validation-schemas/validation";
 import z from "zod";
 import axios from "axios";
+import { sendBookingRequest, sendQuoteRequest } from "./sendMail";
 
 export const bookConsultant = async (formData: FormData) => {
   await new Promise((resolve) => setTimeout(resolve, 2000));
   const data = Object.fromEntries(formData.entries());
-  // console.log(data);
-  const { success, error } = consultationValidationSchema.safeParse(data);
+  const { data: parseResult, success } =
+    consultationValidationSchema.safeParse(data);
   if (!success) {
     return {
-      errors: error.flatten().fieldErrors,
+      error: "Validation error",
       success: false,
       data,
     };
   }
-  return { success: true, data };
+  return await sendBookingRequest(parseResult);
 };
 
 export const requestQuote = async (formData: FormData) => {
   const data = Object.fromEntries(formData.entries());
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  const { success, error } = quoteRequestValidationSchema.safeParse(data);
+  const {
+    success,
+    error,
+    data: parseResult,
+  } = quoteRequestValidationSchema.safeParse(data);
   if (!success) {
     return {
       errors: error.flatten().fieldErrors,
       success: false,
     };
   }
-  return { success: true, data };
+  return await sendQuoteRequest(parseResult);
 };
 
 export const subscribe = async (email: string) => {
@@ -41,7 +45,7 @@ export const subscribe = async (email: string) => {
   if (!parseResult.success)
     return {
       success: false,
-      errors: parseResult.error.flatten().formErrors,
+      error: "Validation Error",
     };
 
   const options = {
@@ -91,7 +95,6 @@ export const subscribe = async (email: string) => {
   // console.log(JSON.stringify(options.data, null, 2));
   try {
     const response = await axios.request(options);
-    // console.log({ response });
     return {
       success: true,
       data: response.data,
