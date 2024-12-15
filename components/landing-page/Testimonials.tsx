@@ -34,11 +34,15 @@ const testimonials: ITestimonial[] = [
 
 const Testimonials = () => {
   return (
-    <div className="grid place-content-center px-2 md:px-4">
+    <div className="grid place-content-center bg-[#4874AE1A]/10 px-2 py-6 md:px-6">
+      <h2 className="text-2xl font-semibold text-center">Testimonials</h2>
+      <p className="text-center text-sm">
+        What our customers have to say about us.
+      </p>
       <section className="grid grid-cols-[repeat(3,minmax(340px,1fr))] gap-4 my-6 md:my-12 py-8 lg:py-10 overflow-x-auto scroll-smooth snap-x snap-mandatory">
         {testimonials.map((item, index) => (
           <div
-            className="grid grid-rows-subgrid row-span-3 gap-0 rounded-3xl p-2 relative bg-[#4874AE1A]/10 shadow-xl snap-center"
+            className="grid grid-rows-subgrid row-span-3 gap-0 rounded-3xl px-4 py-2 relative shadow-xl snap-center bg-white"
             key={index}
           >
             <Image
