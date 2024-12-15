@@ -19,7 +19,14 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
   items,
   speed,
 }) => {
-  const displayItems: CarouselItem[] = [...items, ...items, ...items];
+  const displayItems: CarouselItem[] = [
+    ...items,
+    ...items,
+    ...items,
+    ...items,
+    ...items,
+    ...items,
+  ];
   const baseSpeed = 20;
   const duration = baseSpeed / (speed || 1);
   return (
@@ -33,6 +40,7 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
             <li
               key={index}
               className="flex-shrink-0 flex items-center justify-center relative size-16"
+              aria-hidden={index >= items.length ? true : false}
             >
               <Image
                 src={item.image}
@@ -46,6 +54,7 @@ const InfiniteCarousel: React.FC<InfiniteCarouselProps> = ({
       <div
         className="animate-scroll"
         style={{ animationDuration: `${duration}s` }}
+        aria-hidden
       >
         <ul className="flex gap-2">
           {displayItems.map((item, index) => (

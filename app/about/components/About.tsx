@@ -3,7 +3,7 @@ import People from "@/public/assets/about-page/people.jpg";
 import LayoutWithImageOnLeft from "@/components/LayoutWithImageOnLeft";
 function About() {
   return (
-    <div className=" bg-[#4874AE]/10 py-6 md:py-12">
+    <section className=" bg-[#4874AE]/10 py-6 md:py-12">
       <div className="container">
         <LayoutWithImageOnLeft
           title="Lorem"
@@ -16,7 +16,7 @@ function About() {
           img={People}
         />
       </div>
-    </div>
+    </section>
   );
 }
 

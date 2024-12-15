@@ -3,6 +3,7 @@ import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/public/aavatech_logo.png";
+import { FaTiktok } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -30,7 +31,7 @@ const Footer = () => {
             <Link href="/about">Our Company</Link>
             <Link href="/industries">Our Industries</Link>
             <Link href="/careers">Careers</Link>
-            <Link href="/blogs">Blogs</Link>
+            <Link href="https://blog.investiaa.com/">Blogs</Link>
           </div>
         </div>
         <div className="footer__contact">
@@ -47,26 +48,37 @@ const Footer = () => {
             <Link
               href="https://www.facebook.com/aavatech"
               className="social-icon"
+              target="__blank"
             >
               <Facebook className="stroke-0 fill-blue-600" />
             </Link>
             <Link
               href="https://www.instagram.com/aavatechnology/"
               className="social-icon"
+              target="__blank"
             >
               <Instagram className="stroke-orange-600" />
             </Link>
             <Link
               href="https://www.instagram.com/aavatechnology/"
               className="social-icon"
+              target="__blank"
             >
               <Twitter className="stroke-0 fill-blue-600" />
             </Link>
             <Link
               href="https://www.linkedin.com/company/101443854/aavatechnology"
               className="social-icon"
+              target="__blank"
             >
               <Linkedin className="stroke-0 fill-blue-600" />
+            </Link>
+            <Link
+              href="https://www.tiktok.com/@investiaa?_t=8s42RtxVy24&_r=1"
+              className="social-icon"
+              target="__blank"
+            >
+              <FaTiktok className="fill-black" />
             </Link>
           </div>
         </div>

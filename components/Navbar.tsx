@@ -32,7 +32,7 @@ const MENU_ITEMS = [
   { href: "/about", label: "About Us" },
   { href: "/industries", label: "Industries" },
   { href: "/careers", label: "Careers" },
-  { href: "/blogs", label: "Blogs" },
+  { href: "https://blog.investiaa.com/", label: "Blogs" },
   { href: "/contact", label: "Contact Us" },
 ];
 

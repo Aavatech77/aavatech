@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 type CardProps = {
   title: string;
   description: string;
+  setAsHTML?: boolean;
   href: string;
   img: string | StaticImageData;
   newTab?: boolean;
@@ -20,12 +21,20 @@ const CardHorizontal = ({
   img,
   newTab,
   fit,
+  setAsHTML,
 }: CardProps) => {
   return (
     <div className="rounded-3xl shadow-lg grid sm:grid-cols-[2fr_1fr] overflow-hidden bg-white h-full">
       <div className="pl-4 py-6 space-y-4 grid">
-        <h2 className="font-semibold text-xl uppercase">{title}</h2>
-        <p className="pr-4">{description}</p>
+        <h2 className="font-semibold text-lg uppercase">{title}</h2>
+        {setAsHTML ? (
+          <div
+            className="pr-4"
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></div>
+        ) : (
+          <p className="pr-4">{description}</p>
+        )}
         <Link
           href={href}
           target={newTab ? "_blank" : "_self"}
@@ -37,10 +46,10 @@ const CardHorizontal = ({
       <div className="relative size-full overflow-hidden grid items-center">
         <Image
           src={img}
-          fill
-          sizes="1024px"
+          width={600}
+          height={600}
           className={cn(
-            "min-w-full",
+            "min-w-full max-h-[300px]",
             fit === "cover" ? "object-cover" : "object-contain"
           )}
           alt=""
