@@ -1,14 +1,14 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
-const page = () => {
+const Cpanel = () => {
   const router = useRouter();
-  useLayoutEffect(() => {
+  useEffect(() => {
     router.push(
       "https://s786.bom1.mysecurecloudhost.com:2083/cpsess2600507737/frontend/jupiter/index.html"
     );
-  }, []);
+  }, [router]);
   return <div>Redirecting...</div>;
 };
-export default page;
+export default Cpanel;
